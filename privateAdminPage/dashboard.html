@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link rel="stylesheet" href="/admin/resource?file=style.css" />
+</head>
+
+<body>
+    <noscript> javascript required </noscript>
+    <main>
+        <div class="grid2">
+            <div class="left">
+                <div class="logout">
+                        <div class="btn logoutBtn">Logout</div>
+                </div>
+                <div class="stats">
+                    <div class="flex">
+                        <div class="stats-details box">
+                            <div class="">
+                                <h3 id="noofcomments"></h3>
+                                <p>Comments</p>
+                            </div>
+                        </div>
+                        <div class="stats-details box">
+                            <div class="">
+                                <h3 id="noofsupporters"></h3>
+                                <p>Supporters</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stats-details box" id="amountRaised">
+                        <div class="">
+                            <h3 id="totalRaised"></h3>
+                            <p>Total Raise</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid2 grid-btns">
+                    <div class="box userEdit stats-details" target="accordion">
+                        Edit Profile
+                    </div>
+                    <div class="box supportersDetails stats-details" target="supportersData">
+                        View Supporters
+                    </div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordionhead">User Update</div>
+                    <div class="accordionbody">
+                        <form id="userUpdateForm">
+                            <div class="flex">
+                                <div class="">
+                                    <label for="username">Username <span class="red">*</span></label>
+                                    <input type="text" name="" required id="username" />
+                                </div>
+                                <div class="">
+                                    <label for="Newusername">NewUsername</label>
+                                    <input type="text" name="" id="Newusername" />
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="">
+                                    <label for="Password">Password <span class="red">*</span< /label>
+                      <input type="password" required name="" id="Password" />
+                </div>
+                <div class="">
+                  <label for="NewPassword">New Password</label>
+                                    <input type="password" name="" id="NewPassword" />
+                                </div>
+                            </div>
+                            <label for="radio">What are you updating</label>
+                            <div class="flex radio-btns">
+                                <div class="flex">
+                                    <input type="radio" name="update" id="Usernameupdate" checked />
+                                    <span>username</span>
+                                </div>
+                                <div class="flex">
+                                    <input type="radio" name="update" id="Passwordupdate" />
+                                    <span>password</span>
+                                </div>
+                            </div>
+                            <div class="buttonDiv flex">
+                                <button class="btn primary-btn flex" type="submit">Update</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="supportersData box">
+                    <div class="flex"><span><b>Supporters</b></span>
+                        <div class="btn box close">close</div>
+                    </div>
+                    <ul class="grid">
+                        No supporter yet...
+                    </ul>
+                </div>
+            </div>
+            <div class="right">
+                <h2>Comments</h2>
+                <div id="comment-div" class="grid">
+                </div>
+            </div>
+        </div>
+        <div class="cover close"></div>
+    </main>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/admin/resource?file=script.js"></script>
+</body>
+
+</html>

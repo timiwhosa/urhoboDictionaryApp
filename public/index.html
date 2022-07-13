@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urhobo Dictionary App || Home</title>
+
+    <style>
+        :root {
+    --primary: #002da3;
+    --secondary: #ff5722/*#ffb600*/;
+    --secondary2: #f74b17;
+    --white: #ffffff;
+    --borderColor: hsl(0, 0%, 20%);
+    --boxShadowPrimary: rgba(0, 46, 163, 0.62);
+    --boxShadowSecondary: rgba(255, 183, 0, 0.592);
+    --boxShadowNeutral: #33333317;
+    --boxShadowPrimaryLight: rgba(0, 46, 163, 0.255);
+    --boxShadowPrimaryLight2: rgba(0, 46, 163, 0.059);
+    --textColor: rgba(0, 46, 163, 0.659);
+    --darklight: #0000008c;
+    --margin: 10vw;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
+    font-family: "Inter", sans-serif, Arial, Helvetica;
+    text-decoration: none;
+    list-style-type: none;
+    outline: none;
+    -webkit-user-drag: none;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: auto;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: "inter400", sans-serif;
+    scroll-behavior: smooth;
+    background-color: white;
+    /* background-color: #081331; */
+    /* color: white; */
+}
+
+img {
+    max-width: 100%;
+}
+svg{
+    width: 50px;
+    height: auto;
+}
+a{
+    color:white;
+}
+
+/* special classes */
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.big-heading{
+    font-size: 50px;
+    line-height: 1.2;
+    font-family: "inter700",sans-serif;
+    margin: 14vh 0 20px 5vw;
+}
+.circle-img img {
+    width: 60px;
+    height: 60px;
+    max-width: 8vw;
+    max-height: 8vw;
+    min-width: 30px;
+    min-height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+/* btn */
+
+.btn {
+    border-radius: 10px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    justify-content: space-evenly;
+    font-weight: 600;
+    width: max-content;
+    max-width: 200px;
+    transition: all ease-in-out .1s;
+}
+.primary-btn {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.primary-btn span {
+    margin-left: 10px;
+}
+
+.primary-color {
+    color: var(--primary);
+}
+.secondary-color {
+    color: var(--secondary);
+}
+
+.secondary-btn {
+    background-color: var(--secondary);
+    color: var(--white);
+    border-radius: 10px;
+}
+
+.secondary-btn:active {
+    background-color: var(--secondary2);
+}
+nav{
+    justify-content: space-between;
+    padding: 40px 5vw 20px;
+}
+nav .logo-section{
+    font-size: 20px;
+    line-height: 45px;
+}
+nav .logo-section img{
+    width: auto;
+    height: 50px;
+    margin-right: 5px;
+}
+nav .links ul li{
+    margin-left: 2vw;
+}
+header{
+    margin: 5vh 12vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 4vw;
+    align-items: flex-end;
+    /* height: 80vh; */
+    /* max-height: 500px; */
+    background-image: url("/img/ud/cool-bg.svg");
+    /* background-position: center; */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header h1{
+    font-size: 96px;
+    line-height: 1;
+    margin-bottom: 20px;
+    margin-top: 10vh;
+    font-family: "inter700",sans-serif;
+    font-weight: 900;
+}
+.urb{
+    position: relative;
+}
+.urb::before{
+    content: "";
+    position: absolute;
+    right: -10%;
+    top: 0;
+    background-image: url("/img/ud/hat-svgrepo-com.svg");
+    width: 50px;
+    height:50px;
+    background-size: 50px 50px;
+    transform: rotate(15deg);
+}
+header p {
+    margin: 40px 0 20px;
+    font-size: 18px;
+}
+header button.btn{
+    font-weight: 600;
+    font-family: "inter700", sans-serif;
+    color: white;
+    background-color: #30343f;
+    font-size: 25px;
+    padding:  20px;
+    width: max-content ;
+    max-width: max-content ;
+}
+header .header-img{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header .header-img img{
+    width: 80%;
+    min-width: 200px;
+    object-fit: cover;
+    display: block;
+    /* transform: rotate(15deg); */
+}
+@font-face {
+    font-family: inter400;
+    src: url("/font/inter400.woff2");
+}
+@font-face {
+    font-family: inter700;
+    src: url("/font/inter300.woff2");
+}
+.site-stats{
+    padding: 40px var(--margin);
+    background-color: #01288e;
+    margin: 40px 0 10vh;
+}
+.site-stats .grid{
+    grid-template-columns: repeat(4,1fr);
+    width: 100%;
+    grid-gap: 2vw;
+}
+.site-stats .grid .stat{
+    display: grid;
+    justify-items: left;
+    color: var(--white);
+}
+.site-stats  h3{
+    font-size: 40px;
+}
+.site-stats .grid .stat p{
+    margin-left: 10px;
+    max-width: 100px;
+    color: #ffffff7d;
+}
+.site-stats .grid .stat:not(.site-stats .grid .stat:last-child){
+    border-right: 1px solid #ffffff7d;
+}
+.sweet-section{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 100%;
+    align-items: center;
+    min-height: 80vh;
+    grid-gap: 4vw;
+}
+.sweet-section .sweet-img{
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+.sweet-section .sweet-img:nth-child(1){
+    justify-items: flex-end;
+}
+.sweet-section .sweet-img:nth-child(2){
+    width: 100%;
+    height: 100%;
+    justify-items: flex-start;
+}
+.sweet-section .sweet-img img{
+    width: auto;
+    object-fit: cover;
+    display: block;
+    /* margin: 0 auto; */
+    height: 60%;
+}
+.sweet-section .sweet-main{
+    display: grid;
+    max-height: max-content;
+    padding: 5vw;
+}
+.sweet-section .sweet-main h2{
+    font-weight: 900;
+    font-size: 30px;
+    font-family: "inter300";
+    padding: 20px 0;
+}
+.sweet-section .sweet-main p{
+    max-width: 400px;
+    font-size: 20px;
+    line-height: 30px;
+}
+.sweet-section .sweet-main:nth-child(1){
+    margin-left: 5vw;
+    padding: 0;
+    justify-self: flex-end;
+}
+.sweet-section .sweet-main:nth-child(2){
+    /* margin-left: 5vw; */
+    padding: 0;
+    justify-self: flex-start;
+}
+.section-intro{
+    display: block;
+    width: 80vw;
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 36px;
+}
+footer{
+    /* background-color: var(--primary); */
+    background-color: var(--primary);
+    width: 100%;
+    height: 100%;
+    padding: 30vh 10vw 10vh;
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 22px;
+}
+footer *{
+    color: rgb(255 255 255 / 84%);
+}
+footer h5{
+    font-family: "inter300",sans-serif;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+footer .footer-ctn{
+    grid-template-columns: 5fr 4fr;
+}
+footer .brand img{
+    width: 70px;
+    height: auto;
+    max-width: 30vw;
+    display: block;
+}
+footer .brand .flex h3{
+    font-size: 20px;
+    color: white;
+    margin-left: 5px;
+    /* align-self: flex-end; */
+}
+footer .brand-tagline{
+    line-height: 22px;
+    font-size: 16px;
+    margin: 20px 0 0;
+    max-width: 300px;
+}
+footer .links{
+    grid-gap: 2vw;
+}
+.socials {
+    padding: 20px 0;
+    margin-top: 10px;
+}
+
+.socials li{
+    background-color: rgba(255, 255, 255, 0.731);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2vw;
+    transition: all ease-in-out .3s;
+}
+
+.socials li svg {
+    fill: var(--primary);
+    width: 16px;
+    height: auto;
+}
+.socials a{
+    display: flex;
+}
+
+.socials li:hover {
+    background-color: var(--white);
+}
+
+@media screen and (max-width: 890px){
+    header h1 {
+        font-size: 70px;
+        line-height: 1;
+    }
+    .sweet-section .sweet-img img{
+        height: auto;
+    }
+    .testimonial{
+        grid-template-columns: 1fr;
+    }
+    .testimonial-text div{
+        margin: 40px 0;
+    }
+    .testimonial-video iframe{
+        max-height: 50vh;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    header{
+        max-height: none;
+        height: auto;
+        text-align: center;
+        grid-template-columns: 1fr;
+    }
+    header >div{
+        display: grid;
+        justify-items: center;
+    }
+    header .header-img img{
+        transform: none;
+        margin-top: 40px;
+        width: 80%;
+    }
+    .sweet-section{
+        grid-template-columns: 1fr;
+    }
+    .sweet-section .sweet-main:nth-child(2){
+        margin-right: 5vw;
+    }
+    footer .footer-ctn{
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+    }
+}
+
+
+@media screen and (max-width: 540px) {
+    
+    nav .links li{
+        display: none;
+    }
+    header h1 {
+        font-size: 50px;
+        line-height: 1;
+    }
+    header{
+        max-height: none;
+        height: auto;
+        text-align: center;
+        grid-template-columns: 1fr;
+        margin: 5vh 5vw;
+    }
+    header >div{
+        display: grid;
+        justify-items: center;
+    }
+    header .header-img img{
+        transform: none;
+        margin-top: 40px;
+        width: 100%;
+    }
+    .site-stats{
+        padding: 4vw;
+        justify-content: center;
+    }
+    
+    .site-stats h3{
+        font-size: 20px;
+    }
+    .site-stats .grid{
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 4vw;
+        width: max-content;
+    }
+    .site-stats .grid .stat:nth-child(even){
+        border-right: none !important;
+    }
+    .site-stats .grid .stat p{
+        margin: 1vw;
+        font-size: 16px;
+    }
+    
+    .sweet-section{
+        grid-gap: 20px;
+    }
+    .sweet-section .sweet-main{
+        padding: 0;
+    }
+    .sweet-section .sweet-main p{
+        font-size: 18px;
+    }
+    .sweet-section .sweet-img img{
+        max-height: max-content;
+        width: 100%;
+    }
+    .sweet-section{
+        grid-template-columns:1fr;
+        min-height: min-content;
+    }
+    .sweet-section .sweet-main, .sweet-section .sweet-main:nth-child(2){
+        padding: 2vw;
+        margin: 0;
+    }
+    .site-stats{
+        padding: 20px;
+    }
+    .big-heading{
+        max-width: 300px;
+        font-size: 50px;
+        line-height: 1.1;
+    }
+    .section-intro{
+        width: 90vw;
+    }
+    footer{
+        padding-top: 20vh;
+    }
+    footer .links{
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+    }
+}
+@media screen and (max-width: 420px) {
+    header h1{
+        font-size: 36px;
+        line-height: 1;
+        margin-top: 10vh;
+    }  
+    .urb::before{
+        right: 0;
+        top: -30px;
+    }  
+}
+
+    </style>
+</head>
+<body>
+    <nav class="flex">
+        <div class="logo-section flex">
+            <img  loading="lazy" src="/img/urhoboDictionary-logo-blue1.png" alt="UrhoboDictionary">
+            <span><b>Urhobo Dictionary App</b></span>
+        </div>
+        <div class="links">
+            <ul class="flex">
+                <!-- <li><a href="#">Home</a></li> -->
+                <li><a href="#about">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="/sponsor"><button class="btn secondary-btn">Sponsor</button> </a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="header-ctn">
+            <h1>Learn <span class="urb">Urhobo</span>  Language from the Comfort of your home</h1>
+            <p>
+                Your one stop App for learning Urhobo Langauge
+            </p>
+            <a href="https://play.google.com/store/apps/details?id=com.ensontech.urhobodictionary">
+                <button class="black btn flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-label="Google Play" role="img" viewBox="0 0 512 512">
+                        <clipPath id="a">
+                            <path d="M465 239L169 69c-15-9-35 2-35 20v334c0 18 20 29 35 20l296-171c13-7 13-25 0-33z" />
+                        </clipPath>
+                        <g clip-path="url(#a)" transform="translate(-10 17) scale(.93324)">
+                            <path fill="#0e7" d="M20 53h400v355" />
+                            <path fill="#0df" d="M512 444H98V30" />
+                            <path fill="#f34" d="M399 181v322H76" />
+                            <path fill="#fd0" d="M324 256l180 180V76" />
+                        </g>
+                    </svg>
+                    <span>Download Now</span> 
+                </button>
+            </a>
+        </div>
+        <div class="header-img app-img">
+            <img  loading="lazy" src="/img/ud/screens/clean/mobile-app.png" alt="urhobodictionary app img">
+        </div>
+    </header>
+    <div class="site-stats flex">
+        <div class="grid">
+            <div class="stat">
+                <div class="flex">
+                    <h3>5k+</h3>
+                    <p>on google playstore</p>
+                </div>
+            </div>
+            <div class="stat">
+                <div class="flex">
+                    <h3>2.k+</h3>
+                    <p>Users</p>
+                </div>
+            </div>
+            <div class="stat">
+                <div class="flex">
+                    <h3>500+</h3>
+                    <p>Active Monthly Users across</p>
+                </div>
+            </div>
+            <div class="stat">
+                <div class="flex">
+                    <h3>20</h3>
+                    <p>Countries</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="vision" class="sweet-section">
+        <div class="sweet-img">
+            <img  loading="lazy" src="/img/ud/vision.png" alt="urhobodictionary vision">
+        </div>
+        <div class="sweet-main">
+            <h2>Our Vision</h2>
+            <p>
+                Our vision is to create a platform that will be the best to learn the Urhobo language globally, and also to
+                be an authority to regulate Urhobo Language learning in the nearest future.
+            </p>
+        </div>
+    </section>
+    <section id="about" class="sweet-section">
+        <div class="sweet-main">
+            <h2>About</h2>
+            <p>
+                Urhobo Dictionary App App is an app designed to learn the Urhobo language from the comfort of your home with few clicks, fun
+                and excitement .
+                We focus on creating the contents on the basic pillars of learning a language which are writing , speaking, listening
+                and Reading of the language. A person can be able to Speak, read, and read urhobo language to an extent with our current
+                MVP(version).
+
+            </p>
+        </div>
+        <div class="sweet-img">
+            <img  loading="lazy" src="/img/ud/history.jpg" alt="urhobodictionary vision">
+        </div>
+    </section>
+    <h2 class="big-heading">Features just for you</h2>
+    <section id="Dictionary" class="sweet-section">
+        <div class="sweet-main">
+            <h2>Dictionary</h2>
+            <p>
+                Contains more than 2000+ words in Urhobo with Audio pronunciations which are compiled by professionals,
+                qualified writers, translators, and proficient speakers of the Urhobo Language
+            </p>
+        </div>
+        <div class="sweet-img">
+            <img  loading="lazy" src="/img/ud/screens/Dictionary.png" alt="urhobodictionary dictionary section">
+        </div>
+    </section>
+    <section id="Quiz" class="sweet-section">
+        <div class="sweet-img">
+            <img  loading="lazy" src="/img/ud/screens/Quiz.png" alt=" urhobo dictionary QUIZ">
+        </div>
+        <div class="sweet-main">
+            <h2>Quiz</h2>
+            <p>              
+                This is one of the most exciting parts of the App where users can test their knowledge of the language by playing
+                quizzes of different levels and categories; there is a global leaderboards of learners where all players are ranked according to their scores.
+
+            </p>
+        </div>
+    </section>
+    
+    <section id="more-about" class="sweet-section">
+        <div class="sweet-main">
+            <h2>More About Urhobo Section</h2>
+            <p>
+            This section exposes you to know more about the Urhobo culture, History, Foods, Dialects, Local Government Areas, Dressing Codes, Kings, and Kingdom    
+            </p>
+        </div>
+        <div class="sweet-img">
+            <img  loading="lazy" src="/img/ud/screens/More About.png" alt="urhobo dictionary More About Urhobo ">
+        </div>
+    </section>
+    <!-- <h2 class="big-heading"> More features </h2> -->
+    <!-- <p class="section-intro">
+        
+    </p> -->
+    <!-- <section id="Word-of-the-day" class="sweet-section">
+        <div class="sweet-main">
+            <h2>Word of the day</h2>
+            <p>
+                Master an Urhobo word a day, by knowing the Word of the Day. with Daily Notifications and also posted in all our social
+                media platforms
+
+            </p>
+        </div>
+        <div class="sweet-img">
+            <img  loading="lazy" src="/img/ud/screens/Rectangle (8).png" alt="urhobo dictionary More About Urhobo ">
+        </div>
+    </section> -->
+    <h2 class="big-heading">
+        Success Metric and Impact
+    </h2>
+    <p class="section-intro">
+        The Project started as a personal project but now is now made up of a Team of 8 inspired
+        individuals. Since 2019 and 2021, we have done a lot of iterations based on users' feedback, such as recording over 2000 words in Urhobo, the addition of word of the day, and also integrating the Quiz leaderboard which has more than 700
+        active players.
+        Using 2021 Analytics we have over 5000 downloads in the Google Play Store, and an active user base of over 2120 and 100
+        new users on average monthly users, in Nigeria, the United States, the United Kingdom, Germany, Italy, Ghana,
+        Netherlands, Spain, Canada, and others.
+    </p>
+
+    <!-- <section class="testimonials">
+        <div class="testimonial-heading">
+            <div class="grid2">
+                <div class="left">
+                    <h3>
+                        Satisfied Learners are the Best ads 
+                    </h3>
+                </div>
+                <div class="right">
+                    <div class="flex">
+                        <button class="line-btn">left</button>
+                        <button class="line-btn">right</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-bottom">
+            <div class="testimony">
+                <div class="testimony-icon">
+                    hii
+                </div>
+                <div class="testimony-comment">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic iusto autem porro odit optio, error reprehenderit ipsum quo debitis animi natus modi cupiditate facere ullam rem! Tenetur voluptate quos ipsa, adipisci cupiditate et doloremque eum sequi illum a, quas dolor!
+                </div>
+                <div class="flex">
+                    <div class="circle-img">
+                        <img  loading="lazy" src="/img/ud/testimonial/testimonial1.png" alt="">
+                    </div>
+                    <div class="testimonial-details">
+                        <p class="name">Lorem ipsum dolor sit.</p><p class="role">Lorem ipsum dolor sit.</p><p class="rating">Lorem ipsum dolor sit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimony">
+                <div class="testimony-icon">
+                    hii
+                </div>
+                <div class="testimony-comment">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic iusto autem porro odit optio, error reprehenderit ipsum quo debitis animi natus modi cupiditate facere ullam rem! Tenetur voluptate quos ipsa, adipisci cupiditate et doloremque eum sequi illum a, quas dolor!
+                </div>
+                <div class="flex">
+                    <div class="circle-img">
+                        <img  loading="lazy" src="/img/ud/testimonial/testimonial1.png" alt="">
+                    </div>
+                    <div class="testimonial-details">
+                        <p class="name">Lorem ipsum dolor sit.</p>
+                        <p class="role">Lorem ipsum dolor sit.</p>
+                        <p class="rating">Lorem ipsum dolor sit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimony">
+                <div class="testimony-icon">
+                    hii
+                </div>
+                <div class="testimony-comment">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic iusto autem porro odit optio, error reprehenderit ipsum quo debitis animi natus modi cupiditate facere ullam rem! Tenetur voluptate quos ipsa, adipisci cupiditate et doloremque eum sequi illum a, quas dolor!
+                </div>
+                <div class="flex">
+                    <div class="circle-img">
+                        <img  loading="lazy" src="/img/ud/testimonial/testimonial1.png" alt="">
+                    </div>
+                    <div class="testimonial-details">
+                        <p class="name">Lorem ipsum dolor sit.</p>
+                        <p class="role">Lorem ipsum dolor sit.</p>
+                        <p class="rating">Lorem ipsum dolor sit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimony">
+                <div class="testimony-icon">
+                    hii
+                </div>
+                <div class="testimony-comment">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic iusto autem porro odit optio, error reprehenderit ipsum quo debitis animi natus modi cupiditate facere ullam rem! Tenetur voluptate quos ipsa, adipisci cupiditate et doloremque eum sequi illum a, quas dolor!
+                </div>
+                <div class="flex">
+                    <div class="circle-img">
+                        <img  loading="lazy" src="/img/ud/testimonial/testimonial1.png" alt="">
+                    </div>
+                    <div class="testimonial-details">
+                        <p class="name">Lorem ipsum dolor sit.</p>
+                        <p class="role">Lorem ipsum dolor sit.</p>
+                        <p class="rating">Lorem ipsum dolor sit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    
+    <h2 class="big-heading"> User feedback </h2>
+    <div class="grid2 testimonial">
+        <div class="left testimonial-text">
+            A German resident, Ọghẹnẹfẹga Ogbe who hails from Ethiope East in Delta State, having used the App has this to say:
+            <div class="">
+                <q>
+                    Being born and bred in Germany posed a huge challenge in learning my mother tongue, but thanks to the Urhobo
+                    Dictionary
+                    App which has so much been impactful. It's gradually helping me to write and converse in Urhobo as I have so much
+                    wanted
+                    to. I want to urge all Urhobo sons and daughters out there, especially those who aren't born and bred in their
+                    hometowns
+                    like me, to go out of their way to get this great App and bask in the joy of learning their mother tongue.
+                </q>
+            </div>
+        </div>
+        <div class="right testimonial-video">
+            <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/PJHp0A5gu4A?autoplay=0&cc_load_policy=1&controls=1&disablekb=0&fs=1&iv_load_policy=1&loop=0&rel=0&showinfo=0&start=0&wmode=transparent&theme=dark&mute=0&modestbranding=1"
+                title="YouTube video player" showinfo="0" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"
+                id="iframe1"></iframe>
+        </div>
+    </div>
+    <style>
+        .testimonial{
+            grid-gap: 4vw;
+            margin: 4vh var(--margin);
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 33px;
+            min-height: 60vh;
+            margin-bottom: 30vh;
+        }
+        /* .testimonial-text{
+        } */
+        .testimonial-text div{
+            font-size: 18px;
+            line-height: 30px;
+            background-color: #111e41;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.11);
+            font-style: italic;
+            padding: 20px;
+            border-radius: 4px;
+            color: white;
+        }
+        .testimonial-video iframe{
+            max-width: 100%;
+            max-height: 30vw;
+        }
+        @media screen  and (max-width: 890px){
+            .testimonial-video iframe{
+                max-height: 100%;
+            }
+        }
+
+    </style>
+    <footer>
+        <div class="footer-ctn grid2">
+            <div class="brand">
+                <div class="flex">
+                    <img src="/img/ud/urhobodictionary-white-logo.png" alt="urhobo dictionary">
+                    <h3>UrhoboDictionary</h3>
+                </div>
+                <div class="brand-tagline">
+                    Your one stop App for learning Urhobo Langauge
+                </div>
+            </div>
+            <div class="links grid2">
+                    <div class="">
+                        <h5>Office</h5>
+                        <p>
+                            No. 24 Iyeghe Street Aladja Town, Udu Delta State Nigeria.
+                        </p>
+                    </div>
+                    <div class="contact">
+                        <h5>Contact</h5>
+                        <a href="mailto:support@urhobodictionaryapp.com">support@urhobodictionaryapp.com</a>
+                        <ul class="flex socials">
+                            
+                                <a href="https://web.facebook.com/urhobodictionaryapp"><li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                                        id="Layer_1" x="0px" y="0px" viewBox="0 0 310 310" style="enable-background:new 0 0 310 310;"
+                                        xml:space="preserve">
+                                        <g id="XMLID_834_">
+                                            <path id="XMLID_835_"
+                                                d="M81.703,165.106h33.981V305c0,2.762,2.238,5,5,5h57.616c2.762,0,5-2.238,5-5V165.765h39.064   c2.54,0,4.677-1.906,4.967-4.429l5.933-51.502c0.163-1.417-0.286-2.836-1.234-3.899c-0.949-1.064-2.307-1.673-3.732-1.673h-44.996   V71.978c0-9.732,5.24-14.667,15.576-14.667c1.473,0,29.42,0,29.42,0c2.762,0,5-2.239,5-5V5.037c0-2.762-2.238-5-5-5h-40.545   C187.467,0.023,186.832,0,185.896,0c-7.035,0-31.488,1.381-50.804,19.151c-21.402,19.692-18.427,43.27-17.716,47.358v37.752H81.703   c-2.762,0-5,2.238-5,5v50.844C76.703,162.867,78.941,165.106,81.703,165.106z" />
+                                        </g>
+                                    </svg></li>
+                                </a>
+                            
+                           
+                                <a href="https://twitter.com/LearnUrhoboApp">
+                                   <li>  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                                        id="Layer_1" x="0px" y="0px" viewBox="0 0 310 310" style="enable-background:new 0 0 310 310;"
+                                        xml:space="preserve">
+                                        <g id="XMLID_826_">
+                                            <path id="XMLID_827_"
+                                                d="M302.973,57.388c-4.87,2.16-9.877,3.983-14.993,5.463c6.057-6.85,10.675-14.91,13.494-23.73   c0.632-1.977-0.023-4.141-1.648-5.434c-1.623-1.294-3.878-1.449-5.665-0.39c-10.865,6.444-22.587,11.075-34.878,13.783   c-12.381-12.098-29.197-18.983-46.581-18.983c-36.695,0-66.549,29.853-66.549,66.547c0,2.89,0.183,5.764,0.545,8.598   C101.163,99.244,58.83,76.863,29.76,41.204c-1.036-1.271-2.632-1.956-4.266-1.825c-1.635,0.128-3.104,1.05-3.93,2.467   c-5.896,10.117-9.013,21.688-9.013,33.461c0,16.035,5.725,31.249,15.838,43.137c-3.075-1.065-6.059-2.396-8.907-3.977   c-1.529-0.851-3.395-0.838-4.914,0.033c-1.52,0.871-2.473,2.473-2.513,4.224c-0.007,0.295-0.007,0.59-0.007,0.889   c0,23.935,12.882,45.484,32.577,57.229c-1.692-0.169-3.383-0.414-5.063-0.735c-1.732-0.331-3.513,0.276-4.681,1.597   c-1.17,1.32-1.557,3.16-1.018,4.84c7.29,22.76,26.059,39.501,48.749,44.605c-18.819,11.787-40.34,17.961-62.932,17.961   c-4.714,0-9.455-0.277-14.095-0.826c-2.305-0.274-4.509,1.087-5.294,3.279c-0.785,2.193,0.047,4.638,2.008,5.895   c29.023,18.609,62.582,28.445,97.047,28.445c67.754,0,110.139-31.95,133.764-58.753c29.46-33.421,46.356-77.658,46.356-121.367   c0-1.826-0.028-3.67-0.084-5.508c11.623-8.757,21.63-19.355,29.773-31.536c1.237-1.85,1.103-4.295-0.33-5.998   C307.394,57.037,305.009,56.486,302.973,57.388z" />
+                                        </g>
+                                    </svg>
+                              </li>  </a>
+                            
+                            
+                                <a href="https://www.instagram.com/urho.bodictionaryapp/"><li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.3183118,0.0772036939 C18.5358869,0.132773211 19.3775594,0.311686093 20.156489,0.614412318 C20.9357539,0.917263935 21.5259307,1.30117806 22.1124276,1.88767349 C22.6988355,2.47414659 23.0827129,3.06422396 23.3856819,3.84361655 C23.688357,4.62263666 23.8672302,5.46418415 23.9227984,6.68172489 C23.9916356,8.19170553 24,8.72394829 24,11.9999742 C24,15.2760524 23.9916355,15.808302 23.9227954,17.3182896 C23.8672306,18.5358038 23.6883589,19.3773584 23.3855877,20.1566258 C23.0826716,20.9358162 22.6987642,21.5259396 22.1124276,22.1122749 C21.5259871,22.6987804 20.9357958,23.0827198 20.1563742,23.3856323 C19.3772192,23.6883583 18.5357324,23.8672318 17.3183209,23.9227442 C15.8086874,23.9916325 15.2765626,24 12,24 C8.72343739,24 8.19131258,23.9916325 6.68172382,23.9227463 C5.46426077,23.8672314 4.62270711,23.6883498 3.84342369,23.3855738 C3.0641689,23.0827004 2.47399369,22.6987612 1.88762592,22.1123283 C1.30117312,21.525877 0.91721975,20.9357071 0.614318116,20.1563835 C0.311643016,19.3773633 0.132769821,18.5358159 0.0772038909,17.3183251 C0.0083529426,15.8092887 0,15.2774634 0,11.9999742 C0,8.7225328 0.00835296697,8.19071076 0.0772047368,6.68165632 C0.132769821,5.46418415 0.311643016,4.62263666 0.614362729,3.84350174 C0.91719061,3.06430165 1.30113536,2.4741608 1.88757245,1.88772514 C2.47399369,1.30123879 3.0641689,0.917299613 3.84345255,0.614414972 C4.62236201,0.311696581 5.46409415,0.132773979 6.68163888,0.0772035898 C8.19074867,0.00835221992 8.72252573,0 12,0 C15.2774788,0 15.8092594,0.00835235053 17.3183118,0.0772036939 Z M12,2.66666667 C8.75959504,2.66666667 8.26400713,2.67445049 6.80319929,2.74109814 C5.87614637,2.78341009 5.31952221,2.90172878 4.80947575,3.09995521 C4.37397765,3.26922052 4.09725505,3.44924273 3.77324172,3.77329203 C3.44916209,4.09737087 3.26913181,4.37408574 3.09996253,4.80937168 C2.90169965,5.31965737 2.78340891,5.87618164 2.74109927,6.80321713 C2.67445122,8.26397158 2.66666667,8.75960374 2.66666667,11.9999742 C2.66666667,15.2403924 2.67445121,15.7360281 2.74109842,17.1967643 C2.78340891,18.1238184 2.90169965,18.6803426 3.09990404,19.1904778 C3.26914133,19.6259017 3.44919889,19.9026659 3.77329519,20.2267614 C4.09725505,20.5507573 4.37397765,20.7307795 4.80932525,20.8999863 C5.31971515,21.0982887 5.87621193,21.2165784 6.80323907,21.2588497 C8.26460439,21.3255353 8.76051223,21.3333333 12,21.3333333 C15.2394878,21.3333333 15.7353956,21.3255353 17.1968056,21.2588476 C18.123775,21.216579 18.6802056,21.0982995 19.1905083,20.9000309 C19.6260288,20.7307713 19.9027426,20.5507596 20.2267583,20.226708 C20.5507492,19.9027179 20.7308046,19.6259456 20.9000375,19.1906283 C21.0983009,18.6803412 21.2165908,18.1238118 21.2588986,17.196779 C21.3255376,15.7350718 21.3333333,15.2390126 21.3333333,11.9999742 C21.3333333,8.76098665 21.3255376,8.26493375 21.2589016,6.80323567 C21.2165911,5.87618164 21.0983004,5.31965737 20.9001178,4.80957831 C20.7308131,4.37403932 20.550774,4.09729207 20.2267583,3.77324038 C19.9027658,3.44924868 19.6260264,3.26922777 19.1905015,3.09996643 C18.6803988,2.90171817 18.1238378,2.78341062 17.1967608,2.74109868 C15.7359966,2.67445057 15.2404012,2.66666667 12,2.66666667 Z M12,18.2222222 C8.56356156,18.2222222 5.77777778,15.4364384 5.77777778,12 C5.77777778,8.56356156 8.56356156,5.77777778 12,5.77777778 C15.4364384,5.77777778 18.2222222,8.56356156 18.2222222,12 C18.2222222,15.4364384 15.4364384,18.2222222 12,18.2222222 Z M12,15.5555556 C13.9636791,15.5555556 15.5555556,13.9636791 15.5555556,12 C15.5555556,10.0363209 13.9636791,8.44444444 12,8.44444444 C10.0363209,8.44444444 8.44444444,10.0363209 8.44444444,12 C8.44444444,13.9636791 10.0363209,15.5555556 12,15.5555556 Z M18.2222222,7.11111111 C17.4858426,7.11111111 16.8888889,6.51415744 16.8888889,5.77777778 C16.8888889,5.04139811 17.4858426,4.44444444 18.2222222,4.44444444 C18.9586019,4.44444444 19.5555556,5.04139811 19.5555556,5.77777778 C19.5555556,6.51415744 18.9586019,7.11111111 18.2222222,7.11111111 Z" />
+                                    </svg></li>
+                                </a>
+                            
+                        </ul>
+                    </div>
+                    
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hiiiiii</title>
+  </head>
+  <body>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        padding: 40px;
+        box-shadow: 0 0 20px #333333de;
+        border-radius: 2px;
+        max-width: 90vw;
+      }
+      .container img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto 20px;
+      }
+      .container input:focus {
+        outline: 2px solid #333333;
+      }
+      .container input {
+        display: block;
+        border: none;
+        outline: 1px solid black;
+        border-radius: 2px;
+        padding: 10px 15px;
+        font-size: 16px;
+        margin: 10px 0 20px;
+        cursor: pointer;
+        max-width: 70vw;
+      }
+      .container button {
+        display: block;
+        width: 150px;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+        margin: 0 auto;
+      }
+    </style>
+    <div class="container">
+      <div class="logo-img">
+        <img src="/img/urhoboDictionary-logo-blue1.png" alt="" />
+      </div>
+      <form>
+        <label for="username">Username</label>
+        <input type="text" name="" id="username" required value="admin" />
+        <label for="password">Password</label>
+        <input type="password" name="" id="password" required value="12345" />
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    <script type="text/javascript" src="/js/login.js"></script>
+  </body>
+</html>

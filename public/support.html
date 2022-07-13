@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>urhoboDictionary</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+    <main>
+        <nav class="main-nav flex">
+            <div class="">
+                <img src="/img/urhoboDictionary-logo-blue2.png" alt="urhoboDictionary logo" />
+            </div>
+        </nav>
+        <header>
+
+            <div class="header-ctn flex">
+                <div class="glass"></div>
+                <!-- <img
+            src="/img/eliott-reyna-jCEpN62oWL4-unsplash.jpg"
+            alt="urhoboDictionary cover image"
+          /> -->
+                <div class="header-ctn-left">
+                    <div class="header-text">
+                        <h1>Save Urhobo Language</h1>
+                    </div>
+                    <div class="header-description hide-onSmall">
+                        The Urhobo language is going into extinction. It's a sad thing that this language which our forefathers have protected for ages, has so much lost value to this present generation. Majority of our young people cannot speak and communicate in Urhobo.
+                    </div>
+                    <button class="share-btn hide-onSmall btn primary-btn btn flex">
+              <img src="https://img.icons8.com/metro/26/ffffff/share.png" />
+              <span>share</span>
+            </button>
+                    <div class="socials hide-onSmall">
+                        <ul class="flex">
+                            <li>
+                                <a href="https://web.facebook.com/urhobodictionaryapp">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 310 310" style="enable-background:new 0 0 310 310;" xml:space="preserve">
+                                    <g id="XMLID_834_">
+                                      <path id="XMLID_835_"
+                                        d="M81.703,165.106h33.981V305c0,2.762,2.238,5,5,5h57.616c2.762,0,5-2.238,5-5V165.765h39.064   c2.54,0,4.677-1.906,4.967-4.429l5.933-51.502c0.163-1.417-0.286-2.836-1.234-3.899c-0.949-1.064-2.307-1.673-3.732-1.673h-44.996   V71.978c0-9.732,5.24-14.667,15.576-14.667c1.473,0,29.42,0,29.42,0c2.762,0,5-2.239,5-5V5.037c0-2.762-2.238-5-5-5h-40.545   C187.467,0.023,186.832,0,185.896,0c-7.035,0-31.488,1.381-50.804,19.151c-21.402,19.692-18.427,43.27-17.716,47.358v37.752H81.703   c-2.762,0-5,2.238-5,5v50.844C76.703,162.867,78.941,165.106,81.703,165.106z" />
+                                    </g>
+                                  </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/LearnUrhoboApp">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 310 310" style="enable-background:new 0 0 310 310;" xml:space="preserve">
+                              <g id="XMLID_826_">
+                                <path id="XMLID_827_"
+                                  d="M302.973,57.388c-4.87,2.16-9.877,3.983-14.993,5.463c6.057-6.85,10.675-14.91,13.494-23.73   c0.632-1.977-0.023-4.141-1.648-5.434c-1.623-1.294-3.878-1.449-5.665-0.39c-10.865,6.444-22.587,11.075-34.878,13.783   c-12.381-12.098-29.197-18.983-46.581-18.983c-36.695,0-66.549,29.853-66.549,66.547c0,2.89,0.183,5.764,0.545,8.598   C101.163,99.244,58.83,76.863,29.76,41.204c-1.036-1.271-2.632-1.956-4.266-1.825c-1.635,0.128-3.104,1.05-3.93,2.467   c-5.896,10.117-9.013,21.688-9.013,33.461c0,16.035,5.725,31.249,15.838,43.137c-3.075-1.065-6.059-2.396-8.907-3.977   c-1.529-0.851-3.395-0.838-4.914,0.033c-1.52,0.871-2.473,2.473-2.513,4.224c-0.007,0.295-0.007,0.59-0.007,0.889   c0,23.935,12.882,45.484,32.577,57.229c-1.692-0.169-3.383-0.414-5.063-0.735c-1.732-0.331-3.513,0.276-4.681,1.597   c-1.17,1.32-1.557,3.16-1.018,4.84c7.29,22.76,26.059,39.501,48.749,44.605c-18.819,11.787-40.34,17.961-62.932,17.961   c-4.714,0-9.455-0.277-14.095-0.826c-2.305-0.274-4.509,1.087-5.294,3.279c-0.785,2.193,0.047,4.638,2.008,5.895   c29.023,18.609,62.582,28.445,97.047,28.445c67.754,0,110.139-31.95,133.764-58.753c29.46-33.421,46.356-77.658,46.356-121.367   c0-1.826-0.028-3.67-0.084-5.508c11.623-8.757,21.63-19.355,29.773-31.536c1.237-1.85,1.103-4.295-0.33-5.998   C307.394,57.037,305.009,56.486,302.973,57.388z" />
+                              </g>
+                            </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/urho.bodictionaryapp/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
+                            <path
+                              d="M17.3183118,0.0772036939 C18.5358869,0.132773211 19.3775594,0.311686093 20.156489,0.614412318 C20.9357539,0.917263935 21.5259307,1.30117806 22.1124276,1.88767349 C22.6988355,2.47414659 23.0827129,3.06422396 23.3856819,3.84361655 C23.688357,4.62263666 23.8672302,5.46418415 23.9227984,6.68172489 C23.9916356,8.19170553 24,8.72394829 24,11.9999742 C24,15.2760524 23.9916355,15.808302 23.9227954,17.3182896 C23.8672306,18.5358038 23.6883589,19.3773584 23.3855877,20.1566258 C23.0826716,20.9358162 22.6987642,21.5259396 22.1124276,22.1122749 C21.5259871,22.6987804 20.9357958,23.0827198 20.1563742,23.3856323 C19.3772192,23.6883583 18.5357324,23.8672318 17.3183209,23.9227442 C15.8086874,23.9916325 15.2765626,24 12,24 C8.72343739,24 8.19131258,23.9916325 6.68172382,23.9227463 C5.46426077,23.8672314 4.62270711,23.6883498 3.84342369,23.3855738 C3.0641689,23.0827004 2.47399369,22.6987612 1.88762592,22.1123283 C1.30117312,21.525877 0.91721975,20.9357071 0.614318116,20.1563835 C0.311643016,19.3773633 0.132769821,18.5358159 0.0772038909,17.3183251 C0.0083529426,15.8092887 0,15.2774634 0,11.9999742 C0,8.7225328 0.00835296697,8.19071076 0.0772047368,6.68165632 C0.132769821,5.46418415 0.311643016,4.62263666 0.614362729,3.84350174 C0.91719061,3.06430165 1.30113536,2.4741608 1.88757245,1.88772514 C2.47399369,1.30123879 3.0641689,0.917299613 3.84345255,0.614414972 C4.62236201,0.311696581 5.46409415,0.132773979 6.68163888,0.0772035898 C8.19074867,0.00835221992 8.72252573,0 12,0 C15.2774788,0 15.8092594,0.00835235053 17.3183118,0.0772036939 Z M12,2.66666667 C8.75959504,2.66666667 8.26400713,2.67445049 6.80319929,2.74109814 C5.87614637,2.78341009 5.31952221,2.90172878 4.80947575,3.09995521 C4.37397765,3.26922052 4.09725505,3.44924273 3.77324172,3.77329203 C3.44916209,4.09737087 3.26913181,4.37408574 3.09996253,4.80937168 C2.90169965,5.31965737 2.78340891,5.87618164 2.74109927,6.80321713 C2.67445122,8.26397158 2.66666667,8.75960374 2.66666667,11.9999742 C2.66666667,15.2403924 2.67445121,15.7360281 2.74109842,17.1967643 C2.78340891,18.1238184 2.90169965,18.6803426 3.09990404,19.1904778 C3.26914133,19.6259017 3.44919889,19.9026659 3.77329519,20.2267614 C4.09725505,20.5507573 4.37397765,20.7307795 4.80932525,20.8999863 C5.31971515,21.0982887 5.87621193,21.2165784 6.80323907,21.2588497 C8.26460439,21.3255353 8.76051223,21.3333333 12,21.3333333 C15.2394878,21.3333333 15.7353956,21.3255353 17.1968056,21.2588476 C18.123775,21.216579 18.6802056,21.0982995 19.1905083,20.9000309 C19.6260288,20.7307713 19.9027426,20.5507596 20.2267583,20.226708 C20.5507492,19.9027179 20.7308046,19.6259456 20.9000375,19.1906283 C21.0983009,18.6803412 21.2165908,18.1238118 21.2588986,17.196779 C21.3255376,15.7350718 21.3333333,15.2390126 21.3333333,11.9999742 C21.3333333,8.76098665 21.3255376,8.26493375 21.2589016,6.80323567 C21.2165911,5.87618164 21.0983004,5.31965737 20.9001178,4.80957831 C20.7308131,4.37403932 20.550774,4.09729207 20.2267583,3.77324038 C19.9027658,3.44924868 19.6260264,3.26922777 19.1905015,3.09996643 C18.6803988,2.90171817 18.1238378,2.78341062 17.1967608,2.74109868 C15.7359966,2.67445057 15.2404012,2.66666667 12,2.66666667 Z M12,18.2222222 C8.56356156,18.2222222 5.77777778,15.4364384 5.77777778,12 C5.77777778,8.56356156 8.56356156,5.77777778 12,5.77777778 C15.4364384,5.77777778 18.2222222,8.56356156 18.2222222,12 C18.2222222,15.4364384 15.4364384,18.2222222 12,18.2222222 Z M12,15.5555556 C13.9636791,15.5555556 15.5555556,13.9636791 15.5555556,12 C15.5555556,10.0363209 13.9636791,8.44444444 12,8.44444444 C10.0363209,8.44444444 8.44444444,10.0363209 8.44444444,12 C8.44444444,13.9636791 10.0363209,15.5555556 12,15.5555556 Z M18.2222222,7.11111111 C17.4858426,7.11111111 16.8888889,6.51415744 16.8888889,5.77777778 C16.8888889,5.04139811 17.4858426,4.44444444 18.2222222,4.44444444 C18.9586019,4.44444444 19.5555556,5.04139811 19.5555556,5.77777778 C19.5555556,6.51415744 18.9586019,7.11111111 18.2222222,7.11111111 Z" />
+                          </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="fund-details grid2 show-onSmall">
+                        <div class="left">
+                            <h2 class="amountRaised">$4000</h2>
+                            <p class="targetAmount">of $3000</p>
+                        </div>
+                        <div class="right">
+                            <p class="daysleft">4</p>
+                            <p>days left</p>
+                        </div>
+                    </div>
+                    <button class="secondary-btn btn pledge-btn show-onSmall" name="pledge-btn">
+              PLEDGE NOW
+            </button>
+                </div>
+                <div class="header-ctn-center" onclick="popup()">
+                    <div class="primary-btn btn flex"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 460.114 460.114" style="enable-background:new 0 0 460.114 460.114;" xml:space="preserve">
+                      <g>
+                        <g>
+                          <path
+                            d="M393.538,203.629L102.557,5.543c-9.793-6.666-22.468-7.372-32.94-1.832c-10.472,5.538-17.022,16.413-17.022,28.26v396.173    c0,11.846,6.55,22.721,17.022,28.26c10.471,5.539,23.147,4.834,32.94-1.832l290.981-198.087    c8.746-5.954,13.98-15.848,13.98-26.428C407.519,219.477,402.285,209.582,393.538,203.629z" />
+                        </g>
+                        </g>
+                    </svg></div>
+                </div>
+                <div class="header-ctn-right box hide-onSmall">
+                    <div class="top">
+                        <div class="image-div"></div>
+                        <div class="text">
+                            Promoting Urhobo Culture Through Technology
+                        </div>
+                    </div>
+                    <div class="buttom">
+                        <div class="progress-bar">
+                            <span></span>
+                        </div>
+                        <div class="fund-summary">
+                            <div class="grid2">
+                                <div class="grid fund-raised">
+                                    <span class="primary-color amountRaised"><b></b></span>
+                                    <div class="flex"><span>of </span> <span class="targetAmount"> </span></div>
+                                </div>
+                                <div class="days-left">
+                                    <span id="days-left"></span>
+                                    <span>days left</span>
+                                </div>
+                            </div>
+                            <button class="secondary-btn btn" name="pledge-btn">Pledge Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav class="scroll">
+            <ul>
+                <li class="active" target="story">
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
+                <path
+                  d="M19 10H5c-1.103 0-2 .897-2 2v8c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-8c0-1.103-.897-2-2-2zM5 20v-8h14l.002 8H5zM5 6h14v2H5zm2-4h10v2H7z"
+                />
+              </svg> Story
+                    </p>
+                </li>
+                <li target="reward">
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background: new 0 0 512.001 512.001" xml:space="preserve">
+                <g>
+                  <g>
+                    <path
+                      d="M438.172,143.627l-9.686-66.138l-59.923-29.61L321.896,0l-65.895,11.32L190.106,0L143.44,47.879l-59.923,29.61    l-9.688,66.138l-31.021,59.192l31.021,59.193l9.686,66.137l53.775,26.573v135.869l51.651-22.41v43.822L256,485.24l67.059,26.761    v-43.822l51.651,22.41V354.721l53.775-26.573l9.688-66.138l31.021-59.192L438.172,143.627z M188.942,434.955l-21.174,9.189    v-61.424l21.174,21.725V434.955z M292.583,454.955v12.069l-36.582-14.598l-36.582,14.598v-12.069v-54.331l36.582-6.305    l36.582,6.305V454.955z M344.234,444.144l-21.174-9.188v-30.511l21.174-21.726V444.144z M408.769,252.46l-8.122,55.45    l-50.266,24.838l-39.122,40.139l-53.451-9.181L256,363.394l-1.869,0.322l-53.39,9.171l-39.122-40.14l-50.266-24.838l-8.121-55.45    l-26.016-49.64l26.016-49.64l8.122-55.451L161.62,72.89l39.122-40.139l55.259,9.492l55.259-9.492l39.122,40.139l50.266,24.838    l8.121,55.451l26.016,49.64L408.769,252.46z"
+                    />
+                  </g>
+                </g>
+                <g>
+                  <g>
+                    <path
+                      d="M256.001,67.539c-74.592,0-135.278,60.686-135.278,135.279s60.685,135.279,135.278,135.279    s135.278-60.686,135.278-135.279S330.593,67.539,256.001,67.539z M256.001,307.622c-57.788,0-104.802-47.014-104.802-104.803    S198.213,98.016,256.001,98.016s104.802,47.015,104.802,104.803S313.789,307.622,256.001,307.622z"
+                    />
+                  </g>
+                </g>
+              </svg> Reward <span id="noOfreward" class="notice">6</span>
+                    </p>
+                </li>
+                <!-- <li>
+            <p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24px"
+                height="24px"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  opacity="0.4"
+                  d="M7.24487 14.7815L10.238 10.8914L13.6522 13.5733L16.5813 9.79297"
+                  stroke="#130F26"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <circle
+                  cx="19.9954"
+                  cy="4.20027"
+                  r="1.9222"
+                  stroke="#130F26"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M14.9245 3.12012H7.65679C4.64535 3.12012 2.77808 5.25284 2.77808 8.26428V16.3467C2.77808 19.3581 4.60874 21.4817 7.65679 21.4817H16.2609C19.2724 21.4817 21.1396 19.3581 21.1396 16.3467V9.30776"
+                  stroke="#130F26"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Activity <span id="noOfcomment" class="notice">20</span>
+            </p>
+          </li> -->
+                <li target="community">
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128px" height="128px" viewBox="0 0 128 128" id="Layer_1" style="enable-background: new 0 0 128 128" version="1.1" xml:space="preserve">
+                <g>
+                  <path
+                    d="M64,42c-13.2,0-24,10.8-24,24s10.8,24,24,24s24-10.8,24-24S77.2,42,64,42z M64,82c-8.8,0-16-7.2-16-16s7.2-16,16-16   s16,7.2,16,16S72.8,82,64,82z"
+                  />
+                  <path
+                    d="M64,100.8c-14.9,0-29.2,6.2-39.4,17.1l-2.7,2.9l5.8,5.5l2.7-2.9c8.8-9.4,20.7-14.6,33.6-14.6s24.8,5.2,33.6,14.6l2.7,2.9   l5.8-5.5l-2.7-2.9C93.2,107.1,78.9,100.8,64,100.8z"
+                  />
+                  <path
+                    d="M97,47.9v8c9.4,0,18.1,3.8,24.6,10.7l5.8-5.5C119.6,52.7,108.5,47.9,97,47.9z"
+                  />
+                  <path
+                    d="M116.1,20c0-10.5-8.6-19.1-19.1-19.1S77.9,9.5,77.9,20S86.5,39.1,97,39.1S116.1,30.5,116.1,20z M85.9,20   c0-6.1,5-11.1,11.1-11.1s11.1,5,11.1,11.1s-5,11.1-11.1,11.1S85.9,26.1,85.9,20z"
+                  />
+                  <path
+                    d="M31,47.9c-11.5,0-22.6,4.8-30.4,13.2l5.8,5.5c6.4-6.9,15.2-10.7,24.6-10.7V47.9z"
+                  />
+                  <path
+                    d="M50.1,20C50.1,9.5,41.5,0.9,31,0.9S11.9,9.5,11.9,20S20.5,39.1,31,39.1S50.1,30.5,50.1,20z M31,31.1   c-6.1,0-11.1-5-11.1-11.1S24.9,8.9,31,8.9s11.1,5,11.1,11.1S37.1,31.1,31,31.1z"
+                  />
+                </g>
+              </svg> Community <span id="noOfcommunity" class="notice">20</span>
+                    </p>
+                </li>
+            </ul>
+        </nav>
+        <section>
+            <section class="width active mainSection" id="story">
+                <section class="story-header grid show-onSmall">
+                    <h2>Urhobo Dictionary</h2>
+                    <p>
+                        <b>Save the urhobo language</b>
+                    </p>
+                    <button class="share-btn btn primary-btn btn flex">
+              <img src="https://img.icons8.com/metro/26/ffffff/share.png" />
+              <span>share</span>
+            </button>
+                    <div class="socials">
+                        <ul class="flex">
+                            <li>
+                                <a href="https://web.facebook.com/urhobodictionaryapp">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 310 310" style="enable-background:new 0 0 310 310;" xml:space="preserve">
+                                  <g id="XMLID_834_">
+                                    <path id="XMLID_835_"
+                                      d="M81.703,165.106h33.981V305c0,2.762,2.238,5,5,5h57.616c2.762,0,5-2.238,5-5V165.765h39.064   c2.54,0,4.677-1.906,4.967-4.429l5.933-51.502c0.163-1.417-0.286-2.836-1.234-3.899c-0.949-1.064-2.307-1.673-3.732-1.673h-44.996   V71.978c0-9.732,5.24-14.667,15.576-14.667c1.473,0,29.42,0,29.42,0c2.762,0,5-2.239,5-5V5.037c0-2.762-2.238-5-5-5h-40.545   C187.467,0.023,186.832,0,185.896,0c-7.035,0-31.488,1.381-50.804,19.151c-21.402,19.692-18.427,43.27-17.716,47.358v37.752H81.703   c-2.762,0-5,2.238-5,5v50.844C76.703,162.867,78.941,165.106,81.703,165.106z" />
+                                  </g>
+                                </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/LearnUrhoboApp">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 310 310" style="enable-background:new 0 0 310 310;" xml:space="preserve">
+                                  <g id="XMLID_826_">
+                                    <path id="XMLID_827_"
+                                      d="M302.973,57.388c-4.87,2.16-9.877,3.983-14.993,5.463c6.057-6.85,10.675-14.91,13.494-23.73   c0.632-1.977-0.023-4.141-1.648-5.434c-1.623-1.294-3.878-1.449-5.665-0.39c-10.865,6.444-22.587,11.075-34.878,13.783   c-12.381-12.098-29.197-18.983-46.581-18.983c-36.695,0-66.549,29.853-66.549,66.547c0,2.89,0.183,5.764,0.545,8.598   C101.163,99.244,58.83,76.863,29.76,41.204c-1.036-1.271-2.632-1.956-4.266-1.825c-1.635,0.128-3.104,1.05-3.93,2.467   c-5.896,10.117-9.013,21.688-9.013,33.461c0,16.035,5.725,31.249,15.838,43.137c-3.075-1.065-6.059-2.396-8.907-3.977   c-1.529-0.851-3.395-0.838-4.914,0.033c-1.52,0.871-2.473,2.473-2.513,4.224c-0.007,0.295-0.007,0.59-0.007,0.889   c0,23.935,12.882,45.484,32.577,57.229c-1.692-0.169-3.383-0.414-5.063-0.735c-1.732-0.331-3.513,0.276-4.681,1.597   c-1.17,1.32-1.557,3.16-1.018,4.84c7.29,22.76,26.059,39.501,48.749,44.605c-18.819,11.787-40.34,17.961-62.932,17.961   c-4.714,0-9.455-0.277-14.095-0.826c-2.305-0.274-4.509,1.087-5.294,3.279c-0.785,2.193,0.047,4.638,2.008,5.895   c29.023,18.609,62.582,28.445,97.047,28.445c67.754,0,110.139-31.95,133.764-58.753c29.46-33.421,46.356-77.658,46.356-121.367   c0-1.826-0.028-3.67-0.084-5.508c11.623-8.757,21.63-19.355,29.773-31.536c1.237-1.85,1.103-4.295-0.33-5.998   C307.394,57.037,305.009,56.486,302.973,57.388z" />                         
+                                  </g>
+                                </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/urho.bodictionaryapp/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
+                                  <path
+                                    d="M17.3183118,0.0772036939 C18.5358869,0.132773211 19.3775594,0.311686093 20.156489,0.614412318 C20.9357539,0.917263935 21.5259307,1.30117806 22.1124276,1.88767349 C22.6988355,2.47414659 23.0827129,3.06422396 23.3856819,3.84361655 C23.688357,4.62263666 23.8672302,5.46418415 23.9227984,6.68172489 C23.9916356,8.19170553 24,8.72394829 24,11.9999742 C24,15.2760524 23.9916355,15.808302 23.9227954,17.3182896 C23.8672306,18.5358038 23.6883589,19.3773584 23.3855877,20.1566258 C23.0826716,20.9358162 22.6987642,21.5259396 22.1124276,22.1122749 C21.5259871,22.6987804 20.9357958,23.0827198 20.1563742,23.3856323 C19.3772192,23.6883583 18.5357324,23.8672318 17.3183209,23.9227442 C15.8086874,23.9916325 15.2765626,24 12,24 C8.72343739,24 8.19131258,23.9916325 6.68172382,23.9227463 C5.46426077,23.8672314 4.62270711,23.6883498 3.84342369,23.3855738 C3.0641689,23.0827004 2.47399369,22.6987612 1.88762592,22.1123283 C1.30117312,21.525877 0.91721975,20.9357071 0.614318116,20.1563835 C0.311643016,19.3773633 0.132769821,18.5358159 0.0772038909,17.3183251 C0.0083529426,15.8092887 0,15.2774634 0,11.9999742 C0,8.7225328 0.00835296697,8.19071076 0.0772047368,6.68165632 C0.132769821,5.46418415 0.311643016,4.62263666 0.614362729,3.84350174 C0.91719061,3.06430165 1.30113536,2.4741608 1.88757245,1.88772514 C2.47399369,1.30123879 3.0641689,0.917299613 3.84345255,0.614414972 C4.62236201,0.311696581 5.46409415,0.132773979 6.68163888,0.0772035898 C8.19074867,0.00835221992 8.72252573,0 12,0 C15.2774788,0 15.8092594,0.00835235053 17.3183118,0.0772036939 Z M12,2.66666667 C8.75959504,2.66666667 8.26400713,2.67445049 6.80319929,2.74109814 C5.87614637,2.78341009 5.31952221,2.90172878 4.80947575,3.09995521 C4.37397765,3.26922052 4.09725505,3.44924273 3.77324172,3.77329203 C3.44916209,4.09737087 3.26913181,4.37408574 3.09996253,4.80937168 C2.90169965,5.31965737 2.78340891,5.87618164 2.74109927,6.80321713 C2.67445122,8.26397158 2.66666667,8.75960374 2.66666667,11.9999742 C2.66666667,15.2403924 2.67445121,15.7360281 2.74109842,17.1967643 C2.78340891,18.1238184 2.90169965,18.6803426 3.09990404,19.1904778 C3.26914133,19.6259017 3.44919889,19.9026659 3.77329519,20.2267614 C4.09725505,20.5507573 4.37397765,20.7307795 4.80932525,20.8999863 C5.31971515,21.0982887 5.87621193,21.2165784 6.80323907,21.2588497 C8.26460439,21.3255353 8.76051223,21.3333333 12,21.3333333 C15.2394878,21.3333333 15.7353956,21.3255353 17.1968056,21.2588476 C18.123775,21.216579 18.6802056,21.0982995 19.1905083,20.9000309 C19.6260288,20.7307713 19.9027426,20.5507596 20.2267583,20.226708 C20.5507492,19.9027179 20.7308046,19.6259456 20.9000375,19.1906283 C21.0983009,18.6803412 21.2165908,18.1238118 21.2588986,17.196779 C21.3255376,15.7350718 21.3333333,15.2390126 21.3333333,11.9999742 C21.3333333,8.76098665 21.3255376,8.26493375 21.2589016,6.80323567 C21.2165911,5.87618164 21.0983004,5.31965737 20.9001178,4.80957831 C20.7308131,4.37403932 20.550774,4.09729207 20.2267583,3.77324038 C19.9027658,3.44924868 19.6260264,3.26922777 19.1905015,3.09996643 C18.6803988,2.90171817 18.1238378,2.78341062 17.1967608,2.74109868 C15.7359966,2.67445057 15.2404012,2.66666667 12,2.66666667 Z M12,18.2222222 C8.56356156,18.2222222 5.77777778,15.4364384 5.77777778,12 C5.77777778,8.56356156 8.56356156,5.77777778 12,5.77777778 C15.4364384,5.77777778 18.2222222,8.56356156 18.2222222,12 C18.2222222,15.4364384 15.4364384,18.2222222 12,18.2222222 Z M12,15.5555556 C13.9636791,15.5555556 15.5555556,13.9636791 15.5555556,12 C15.5555556,10.0363209 13.9636791,8.44444444 12,8.44444444 C10.0363209,8.44444444 8.44444444,10.0363209 8.44444444,12 C8.44444444,13.9636791 10.0363209,15.5555556 12,15.5555556 Z M18.2222222,7.11111111 C17.4858426,7.11111111 16.8888889,6.51415744 16.8888889,5.77777778 C16.8888889,5.04139811 17.4858426,4.44444444 18.2222222,4.44444444 C18.9586019,4.44444444 19.5555556,5.04139811 19.5555556,5.77777778 C19.5555556,6.51415744 18.9586019,7.11111111 18.2222222,7.11111111 Z" />
+                                </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <div class="story-group">
+                    <h2>Urhobo Location and Population</h2>
+                    <p>
+                        The Urhobo are the major ethnic group in Delta State, one of the thirty six states of the Federal Republic of Nigeria. The Urhobos speak the Urhobo language. The word ‘Urhobo' refers to a group of people rather than a territory. Approximately 6 to 7 million
+                        people are Urhobo. They have a social and cultural affinity to the Bini people of Nigeria.
+                    </p>
+                    <p>
+                        The Urhobo people live in a territory bounded by latitudes 6°and 5°, 15° North and Longitudes 5°, 40° and 6°, 25° East in the Delta and the Bayelsa States of Nigeria. Their neighbors are the Isoko to the southeast, the Itsekiri and Ijaw to the west, the
+                        Bini to the north, the Ijaw to the south and the Ukwuani people to the northeast.
+                    </p>
+                    <img src="/img/eliott-reyna-jCEpN62oWL4-unsplash.jpg" alt="urhobodictionary story" />
+                    <!-- <video src=""></video> -->
+                </div>
+                <div class="story-group">
+                    <h2>Current Problem</h2>
+                    <p>
+                        The Urhobo language is going into extinction. It’s a sad thing that this language which our forefathers have protected for ages, has so much lost value to this present generation. Majority of our young people cannot speak and communicate in Urhobo. The
+                        language is being endangered because in many homes, our children are being spoken to in a language other than Urhobo. In the time of our forefathers, Urhobo was the lingua franca at homes, on the streets, in churches, in schools,
+                        in playing grounds, in marketplaces, etc. But that isn’t so today. This ugly situation could be traced to how much we have so embraced westernization at the expense of our mother tongue. If this unpleasant trend continues, it will
+                        lead to the extinction of the Urhobo language in the near future. How would you feel if, years to come, you can’t teach your children about your tribe and culture? What would your children learn of your history? Just like the death
+                        of a baby is a big blow to its family, the extinction of a language would be a big blow to the owners
+                    </p>
+                </div>
+                <div class="story-group">
+                    <h2>How The Urhobo Dictionary App Will Help Solve The Problem</h2>
+                    <p>
+                        The Urhobo Dictionary App solves the problem by focusing on creating content on the key pillars of learning a language, which are learning, reading, writing, and speaking the Urhobo language with fun and with excitement, from the comfort of users' homes.
+                    </p>
+                </div>
+                <div class="story-group">
+                    <h2>Features On What We Are Working On (upcoming App Features)</h2>
+                    <h3>The Dictionary Section:</h3>
+                    <p>
+                        We look forward to making sentences and Audio pronunciations of all possible Urhobo Words which are compiled by professionals, qualified writers, translators, and proficient speakers of the Urhobo Language. A 'word' can be searched either by direct typing
+                        or by voice search, and that will bring out everything about that word. Since they are different dialects in the Urhobo language, if a word, or a sentence or an audio pronunciation is not correct, the word can be up-voted or voted
+                        for by the App users; then they may suggest the correct one, thereby allowing for community contributions — a key metric to growth.
+                    </p>
+                    <h3>The Learn Section:</h3>
+                    <p>
+                        Since the primary aim of the app is to aid the learning of the language and since most of the users will be newbies of the language, the App will feature pre-made courses and lessons that will help users of the App learn to speak, read and write basic
+                        words and sentences in Urhobo. This is called the Learn Section. It will be arranged into units, modules and lessons. Upon the completion of each module and unit, there will be some simple assessment to test the understanding of
+                        users on the module or unit they have just completed. It will feature an audio guide for each word, phrase, or sentence in the lessons which will help users learn to speak better. The lessons will be compiled and structured by
+                        experienced and skilled teachers of the Language who have successfully tested their methods and found them to work for even the least beginner of the language.
+                    </p>
+                    <h3>The Quiz Section:</h3>
+                    <p>
+                        This is one of the most exciting parts of the App where users can test their knowledge of the language by playing quizzes of different levels and categories; users can compete with friends across the globe and with a global leaderboards of learners where
+                        all players are ranked according to their scores. The MVP(current App version) have more than 700 active players of the quiz. This shows users are really interested in it.
+                    </p>
+                    <h3>The More About Section:</h3>
+                    <p>
+                        This section exposes you to know more about the Urhobo culture, History, Foods, Dialects, Local Government Areas, Dressing Codes, Kings and Kingdom
+                    </p>
+                </div>
+                <div class="story-group">
+                    <h2>How The Urhobo Dictionary App Started</h2>
+                    <p>
+                        Urhobo dictionary app started when I had just completed my 100 level back in 201. At the time I was undergoing Android Basic Nanodgree by Udacity sponsored by Google and Andela Learning Community; in the course of the program, we built a Miwok app (Sample
+                        App for learning the Miwok language). At the end of that Program in October 2018, I decided to work on a real-life project, so I began the journey of creating an App for my local dialect Urhobo, having found out that the language
+                        is being endangered. Being someone who has a value for my language and culture led me to this liberation mission — the mission of liberating the Urhobo Language from the pit of extinction. <br /> The first
+                        version of the App was released back in December 2019. That took about a year to build, because of my school activities and low resources at the time. <br />
+                        <b>Success Metric and Impact</b> <br /> The Project started as a personal project but now is now made up of a Team of 8 inspired individuals. Since 2019 and 2021, we have done a lot of iterations based on users' feedback, such
+                        as recording over 2000 words in Urhobo, the addition of word of the day, and also integrating the Quiz leaderboard which has more than 700 active players. <br /> Using 2021 Analytics we have over 5000 downloads in the Google Play
+                        Store, and an active user base of over 2120 and 100 new users on average monthly users, in Nigeria, the United States, the United Kingdom, Germany, Italy, Ghana, Netherlands, Spain, Canada, and others.
+                    </p>
+                    <!-- <img
+              src="/img/eliott-reyna-jCEpN62oWL4-unsplash.jpg"
+              alt="urhobodictionary story"
+            /> -->
+                    <!-- <video src=""></video> -->
+                </div>
+                <div class="story-group">
+                    <h2>Users Feedback</h2>
+                    <p>
+                        A Germany resident, Ọghẹnẹfẹga Ogbe who hails from Ethiope East in Delta State, having used the App has this to say <br />
+                        <q>
+                Being born and bred in Germany posed a huge challenge in
+                learning my mother tongue, but thanks to the Urhobo Dictionary
+                App which has so much been impactful. It’s gradually helping me
+                to write and converse in Urhobo like I have so much wanted to. I
+                want to urge all Urhobo sons and daughters out there, especially
+                those who aren’t born and bred in their hometowns like me, to go
+                out of their way to get this great App and bask in the joy of
+                learning their mother tongue.</q
+              >
+            </p>
+          </div>
+          <div class="story-group">
+            <h2>Why You Should Be A Part Of This Project</h2>
+            <p>
+              Our vision is to create a platform that will be the best to learn
+              the Urhobo language globally, and also to be an authority to
+              regulate Urhobo Language learning in the nearest future. With you
+              supporting this project, we can achieve this together. <br />
+              <b>Help savetheurhobolanguage today!</b>
+            </p>
+          </div>
+        </section>
+        <section class="width mainSection" id="reward">
+          <div class="rewards">
+            <div class="eachReward box eachRewardMain" id="reward1">
+              <div class="top">
+                <img
+                  src="/img/eliott-reyna-jCEpN62oWL4-unsplash.jpg"
+                  alt="reward-img"
+                  class="reward-img"
+                />
+              </div>
+              <div class="reward-ctn">
+                <div class="reward-title  silver">Silver sponsors</div>
+                <div class="reward-description">
+                   
+                  Social media shout-out, a big thank you from our team and a special badge attached to your profile.
+
+                </div>
+                <button class="secondary-btn btn">1- 10$</button>
+                <div class="reward-details flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1"
+                    id="Layer_1"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 64 64"
+                    enable-background="new 0 0 64 64"
+                    xml:space="preserve"
+                  >
+                    <g id="Bust">
+                      <path
+                        d="M54.9169235,37.1247482c-0.0205002-0.2118988-0.1084023-0.4115982-0.2505035-0.5702972   c-3.5253983-3.9286995-8.8290977-7.2862015-14.9379997-9.4556007c-0.4325829-0.1513996-0.7958984-0.4561005-1.0248985-0.8521004   c-0.0126839-0.0760994-0.0346832-0.1518002-0.0663986-0.2259998c-0.2089996-0.4902992-0.0508003-1.0694008,0.4057999-1.3999004   c3.2474976-2.5341988,5.1865005-6.6703987,5.1865005-11.0639992c0-7.4614005-5.4863014-13.5317001-12.2295017-13.5317001   S19.7709217,6.0954499,19.7709217,13.5568504c0,4.4785004,1.9922009,8.6366997,5.3501015,11.1387005   c0.4102001,0.2894993,0.5741997,0.8275986,0.4038143,1.3002987c-0.0098152,0.019001-0.0185146,0.0384998-0.0273151,0.0580997   c-0.1968002,0.4590015-0.5776844,0.8149014-1.0468998,0.9785004c-6.1875,2.1714001-11.5562,5.5532017-15.1166992,9.5220013   c-0.142086,0.158699-0.2300005,0.3583984-0.2505007,0.5702972c-0.6187,6.3252029,2.3207998,13.1025009,7.8671999,18.1328011   c0.6420994,0.5765991,1.4228001,0.9971008,2.2646008,1.2178001c4.0629997,1.0376015,8.4228992,1.5560989,12.7841988,1.5560989   c4.3779011,0,8.7572994-0.5228996,12.8369007-1.5682983c0.8003006-0.2120018,1.5522995-0.6176987,2.1791992-1.1767998   C52.5819206,50.2575493,55.5355225,43.4679489,54.9169235,37.1247482z M45.6801224,53.7990494   c-0.3886986,0.3466988-0.857399,0.5996017-1.347702,0.7294998c-7.8212967,2.0054016-16.7958984,2.0093002-24.6161976,0.0116997   c-0.5293007-0.1386986-1.023901-0.4053001-1.4267006-0.7665977c-4.9794998-4.5166016-7.6704998-10.5219994-7.2451992-16.1289024   c3.3403997-3.6176987,8.3213005-6.7094994,14.0655136-8.7255993c0.9632854-0.3349991,1.7538853-1.0546989,2.1830864-1.9828987   c0.0170994-0.0307999,0.0326996-0.0630016,0.0467987-0.0957012c0.575201-1.3486004,0.1265011-2.9379997-1.0458851-3.7631989   c-2.8325138-2.1113014-4.5239143-5.6704006-4.5239143-9.5205002c0-6.3594003,4.5893993-11.5327005,10.2299995-11.5327005   c5.6410999,0,10.2305012,5.1733003,10.2305012,11.5327005c0,3.7826996-1.6514015,7.3295994-4.3871994,9.4652996   c-1.1060028,0.7984009-1.5567017,2.1875-1.1597023,3.4692993c0.0063171,0.1152,0.0331993,0.2290001,0.0786018,0.3348999   c0.4320984,1.0098,1.2719994,1.7968998,2.3008003,2.1578007c5.6674995,2.0121994,10.5863991,5.0810013,13.8925972,8.6605988   C53.381321,43.2677498,50.6771202,49.2843513,45.6801224,53.7990494z"
+                      />
+                      <path
+                        d="M35.9999237,62.0744514h-8.0000019c-0.5248985,0-0.9501991,0.4252968-0.9501991,0.9501991   c0,0.5248985,0.4253006,0.9501991,0.9501991,0.9501991h8.0000019c0.5249138,0,0.9501991-0.4253006,0.9501991-0.9501991   C36.9501228,62.4997482,36.5248375,62.0744514,35.9999237,62.0744514z"
+                      />
+                    </g>
+                  </svg>
+                  <span>18 chosen</span>
+                </div>
+              </div>
+            </div><div class="eachReward box eachRewardMain" id="reward2">
+              <div class="top">
+                <img src="/img/eliott-reyna-jCEpN62oWL4-unsplash.jpg" alt="reward-img" class="reward-img" />
+              </div>
+              <div class="reward-ctn">
+                <div class="reward-title iridium">Iridium sponsor</div>
+                <div class="reward-description">
+                    
+                  Social media shout-out, a month free subscription for you or any designated person to stand in your place, and a special
+                  badge attached to your profile.
+
+                </div>
+                <button class="secondary-btn btn">10 - 50$</button>
+                <div class="reward-details flex">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1"
+                    x="0px" y="0px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                    <g id="Bust">
+                      <path
+                        d="M54.9169235,37.1247482c-0.0205002-0.2118988-0.1084023-0.4115982-0.2505035-0.5702972   c-3.5253983-3.9286995-8.8290977-7.2862015-14.9379997-9.4556007c-0.4325829-0.1513996-0.7958984-0.4561005-1.0248985-0.8521004   c-0.0126839-0.0760994-0.0346832-0.1518002-0.0663986-0.2259998c-0.2089996-0.4902992-0.0508003-1.0694008,0.4057999-1.3999004   c3.2474976-2.5341988,5.1865005-6.6703987,5.1865005-11.0639992c0-7.4614005-5.4863014-13.5317001-12.2295017-13.5317001   S19.7709217,6.0954499,19.7709217,13.5568504c0,4.4785004,1.9922009,8.6366997,5.3501015,11.1387005   c0.4102001,0.2894993,0.5741997,0.8275986,0.4038143,1.3002987c-0.0098152,0.019001-0.0185146,0.0384998-0.0273151,0.0580997   c-0.1968002,0.4590015-0.5776844,0.8149014-1.0468998,0.9785004c-6.1875,2.1714001-11.5562,5.5532017-15.1166992,9.5220013   c-0.142086,0.158699-0.2300005,0.3583984-0.2505007,0.5702972c-0.6187,6.3252029,2.3207998,13.1025009,7.8671999,18.1328011   c0.6420994,0.5765991,1.4228001,0.9971008,2.2646008,1.2178001c4.0629997,1.0376015,8.4228992,1.5560989,12.7841988,1.5560989   c4.3779011,0,8.7572994-0.5228996,12.8369007-1.5682983c0.8003006-0.2120018,1.5522995-0.6176987,2.1791992-1.1767998   C52.5819206,50.2575493,55.5355225,43.4679489,54.9169235,37.1247482z M45.6801224,53.7990494   c-0.3886986,0.3466988-0.857399,0.5996017-1.347702,0.7294998c-7.8212967,2.0054016-16.7958984,2.0093002-24.6161976,0.0116997   c-0.5293007-0.1386986-1.023901-0.4053001-1.4267006-0.7665977c-4.9794998-4.5166016-7.6704998-10.5219994-7.2451992-16.1289024   c3.3403997-3.6176987,8.3213005-6.7094994,14.0655136-8.7255993c0.9632854-0.3349991,1.7538853-1.0546989,2.1830864-1.9828987   c0.0170994-0.0307999,0.0326996-0.0630016,0.0467987-0.0957012c0.575201-1.3486004,0.1265011-2.9379997-1.0458851-3.7631989   c-2.8325138-2.1113014-4.5239143-5.6704006-4.5239143-9.5205002c0-6.3594003,4.5893993-11.5327005,10.2299995-11.5327005   c5.6410999,0,10.2305012,5.1733003,10.2305012,11.5327005c0,3.7826996-1.6514015,7.3295994-4.3871994,9.4652996   c-1.1060028,0.7984009-1.5567017,2.1875-1.1597023,3.4692993c0.0063171,0.1152,0.0331993,0.2290001,0.0786018,0.3348999   c0.4320984,1.0098,1.2719994,1.7968998,2.3008003,2.1578007c5.6674995,2.0121994,10.5863991,5.0810013,13.8925972,8.6605988   C53.381321,43.2677498,50.6771202,49.2843513,45.6801224,53.7990494z" />
+                      <path
+                        d="M35.9999237,62.0744514h-8.0000019c-0.5248985,0-0.9501991,0.4252968-0.9501991,0.9501991   c0,0.5248985,0.4253006,0.9501991,0.9501991,0.9501991h8.0000019c0.5249138,0,0.9501991-0.4253006,0.9501991-0.9501991   C36.9501228,62.4997482,36.5248375,62.0744514,35.9999237,62.0744514z" />
+                    </g>
+                  </svg>
+                  <span>18 chosen</span>
+                </div>
+              </div>
+            </div><div class="eachReward box eachRewardMain" id="reward3">
+              <div class="top">
+                <img src="/img/eliott-reyna-jCEpN62oWL4-unsplash.jpg" alt="reward-img" class="reward-img" />
+              </div>
+              <div class="reward-ctn">
+                <div class="reward-title ruthenium">Ruthenium sponsor</div>
+                <div class="reward-description">
+                  You are superb. You merited our social media shout-out, our everlasting shout-out messages, two months fee subscription
+                  for you or any designated person to stand in your place, and a special badge attached to your profile.
+
+                </div>
+                <button class="secondary-btn btn">50 - 100$ </button>
+                <div class="reward-details flex">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1"
+                    x="0px" y="0px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                    <g id="Bust">
+                      <path
+                        d="M54.9169235,37.1247482c-0.0205002-0.2118988-0.1084023-0.4115982-0.2505035-0.5702972   c-3.5253983-3.9286995-8.8290977-7.2862015-14.9379997-9.4556007c-0.4325829-0.1513996-0.7958984-0.4561005-1.0248985-0.8521004   c-0.0126839-0.0760994-0.0346832-0.1518002-0.0663986-0.2259998c-0.2089996-0.4902992-0.0508003-1.0694008,0.4057999-1.3999004   c3.2474976-2.5341988,5.1865005-6.6703987,5.1865005-11.0639992c0-7.4614005-5.4863014-13.5317001-12.2295017-13.5317001   S19.7709217,6.0954499,19.7709217,13.5568504c0,4.4785004,1.9922009,8.6366997,5.3501015,11.1387005   c0.4102001,0.2894993,0.5741997,0.8275986,0.4038143,1.3002987c-0.0098152,0.019001-0.0185146,0.0384998-0.0273151,0.0580997   c-0.1968002,0.4590015-0.5776844,0.8149014-1.0468998,0.9785004c-6.1875,2.1714001-11.5562,5.5532017-15.1166992,9.5220013   c-0.142086,0.158699-0.2300005,0.3583984-0.2505007,0.5702972c-0.6187,6.3252029,2.3207998,13.1025009,7.8671999,18.1328011   c0.6420994,0.5765991,1.4228001,0.9971008,2.2646008,1.2178001c4.0629997,1.0376015,8.4228992,1.5560989,12.7841988,1.5560989   c4.3779011,0,8.7572994-0.5228996,12.8369007-1.5682983c0.8003006-0.2120018,1.5522995-0.6176987,2.1791992-1.1767998   C52.5819206,50.2575493,55.5355225,43.4679489,54.9169235,37.1247482z M45.6801224,53.7990494   c-0.3886986,0.3466988-0.857399,0.5996017-1.347702,0.7294998c-7.8212967,2.0054016-16.7958984,2.0093002-24.6161976,0.0116997   c-0.5293007-0.1386986-1.023901-0.4053001-1.4267006-0.7665977c-4.9794998-4.5166016-7.6704998-10.5219994-7.2451992-16.1289024   c3.3403997-3.6176987,8.3213005-6.7094994,14.0655136-8.7255993c0.9632854-0.3349991,1.7538853-1.0546989,2.1830864-1.9828987   c0.0170994-0.0307999,0.0326996-0.0630016,0.0467987-0.0957012c0.575201-1.3486004,0.1265011-2.9379997-1.0458851-3.7631989   c-2.8325138-2.1113014-4.5239143-5.6704006-4.5239143-9.5205002c0-6.3594003,4.5893993-11.5327005,10.2299995-11.5327005   c5.6410999,0,10.2305012,5.1733003,10.2305012,11.5327005c0,3.7826996-1.6514015,7.3295994-4.3871994,9.4652996   c-1.1060028,0.7984009-1.5567017,2.1875-1.1597023,3.4692993c0.0063171,0.1152,0.0331993,0.2290001,0.0786018,0.3348999   c0.4320984,1.0098,1.2719994,1.7968998,2.3008003,2.1578007c5.6674995,2.0121994,10.5863991,5.0810013,13.8925972,8.6605988   C53.381321,43.2677498,50.6771202,49.2843513,45.6801224,53.7990494z" />
+                      <path
+                        d="M35.9999237,62.0744514h-8.0000019c-0.5248985,0-0.9501991,0.4252968-0.9501991,0.9501991   c0,0.5248985,0.4253006,0.9501991,0.9501991,0.9501991h8.0000019c0.5249138,0,0.9501991-0.4253006,0.9501991-0.9501991   C36.9501228,62.4997482,36.5248375,62.0744514,35.9999237,62.0744514z" />
+                    </g>
+                  </svg>
+                  <span>18 chosen</span>
+                </div>
+              </div>
+            </div><div class="eachReward box eachRewardMain" id="reward4">
+              <div class="top">
+                <img src="/img/eliott-reyna-jCEpN62oWL4-unsplash.jpg" alt="reward-img" class="reward-img" />
+              </div>
+              <div class="reward-ctn">
+                <div class="reward-title gold">Gold sponsor</div>
+                <div class="reward-description">
+                  WOW!!! A million thanks to you. You merited a special T-shirt from our team, three months of free subscriptions for you
+                  or any designated person to stand in your place, a social media shout, and a special badge attached to your profile.
+
+                </div>
+                <button class="secondary-btn btn">100 - 500$</button>
+                <div class="reward-details flex">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1"
+                    x="0px" y="0px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                    <g id="Bust">
+                      <path
+                        d="M54.9169235,37.1247482c-0.0205002-0.2118988-0.1084023-0.4115982-0.2505035-0.5702972   c-3.5253983-3.9286995-8.8290977-7.2862015-14.9379997-9.4556007c-0.4325829-0.1513996-0.7958984-0.4561005-1.0248985-0.8521004   c-0.0126839-0.0760994-0.0346832-0.1518002-0.0663986-0.2259998c-0.2089996-0.4902992-0.0508003-1.0694008,0.4057999-1.3999004   c3.2474976-2.5341988,5.1865005-6.6703987,5.1865005-11.0639992c0-7.4614005-5.4863014-13.5317001-12.2295017-13.5317001   S19.7709217,6.0954499,19.7709217,13.5568504c0,4.4785004,1.9922009,8.6366997,5.3501015,11.1387005   c0.4102001,0.2894993,0.5741997,0.8275986,0.4038143,1.3002987c-0.0098152,0.019001-0.0185146,0.0384998-0.0273151,0.0580997   c-0.1968002,0.4590015-0.5776844,0.8149014-1.0468998,0.9785004c-6.1875,2.1714001-11.5562,5.5532017-15.1166992,9.5220013   c-0.142086,0.158699-0.2300005,0.3583984-0.2505007,0.5702972c-0.6187,6.3252029,2.3207998,13.1025009,7.8671999,18.1328011   c0.6420994,0.5765991,1.4228001,0.9971008,2.2646008,1.2178001c4.0629997,1.0376015,8.4228992,1.5560989,12.7841988,1.5560989   c4.3779011,0,8.7572994-0.5228996,12.8369007-1.5682983c0.8003006-0.2120018,1.5522995-0.6176987,2.1791992-1.1767998   C52.5819206,50.2575493,55.5355225,43.4679489,54.9169235,37.1247482z M45.6801224,53.7990494   c-0.3886986,0.3466988-0.857399,0.5996017-1.347702,0.7294998c-7.8212967,2.0054016-16.7958984,2.0093002-24.6161976,0.0116997   c-0.5293007-0.1386986-1.023901-0.4053001-1.4267006-0.7665977c-4.9794998-4.5166016-7.6704998-10.5219994-7.2451992-16.1289024   c3.3403997-3.6176987,8.3213005-6.7094994,14.0655136-8.7255993c0.9632854-0.3349991,1.7538853-1.0546989,2.1830864-1.9828987   c0.0170994-0.0307999,0.0326996-0.0630016,0.0467987-0.0957012c0.575201-1.3486004,0.1265011-2.9379997-1.0458851-3.7631989   c-2.8325138-2.1113014-4.5239143-5.6704006-4.5239143-9.5205002c0-6.3594003,4.5893993-11.5327005,10.2299995-11.5327005   c5.6410999,0,10.2305012,5.1733003,10.2305012,11.5327005c0,3.7826996-1.6514015,7.3295994-4.3871994,9.4652996   c-1.1060028,0.7984009-1.5567017,2.1875-1.1597023,3.4692993c0.0063171,0.1152,0.0331993,0.2290001,0.0786018,0.3348999   c0.4320984,1.0098,1.2719994,1.7968998,2.3008003,2.1578007c5.6674995,2.0121994,10.5863991,5.0810013,13.8925972,8.6605988   C53.381321,43.2677498,50.6771202,49.2843513,45.6801224,53.7990494z" />
+                      <path
+                        d="M35.9999237,62.0744514h-8.0000019c-0.5248985,0-0.9501991,0.4252968-0.9501991,0.9501991   c0,0.5248985,0.4253006,0.9501991,0.9501991,0.9501991h8.0000019c0.5249138,0,0.9501991-0.4253006,0.9501991-0.9501991   C36.9501228,62.4997482,36.5248375,62.0744514,35.9999237,62.0744514z" />
+                    </g>
+                  </svg>
+                  <span>18 chosen</span>
+                </div>
+              </div>
+            </div><div class="eachReward box eachRewardMain" id="reward5">
+              <div class="top">
+                <img src="/img/eliott-reyna-jCEpN62oWL4-unsplash.jpg" alt="reward-img" class="reward-img" />
+              </div>
+              <div class="reward-ctn">
+                <div class="reward-title platinium">Platinum sponsors</div>
+                <div class="reward-description">
+                  WHOA!!! In our own words, he who has given much should expect much. Receive all the thanks from our team. You merited
+                  with a special T-Shirts from our team, four months of free subscription, a social media shout -out and a special badge
+                  attach to your profile.
+
+                </div>
+                <button class="secondary-btn btn">1000$ and above</button>
+                <div class="reward-details flex">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1"
+                    x="0px" y="0px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                    <g id="Bust">
+                      <path
+                        d="M54.9169235,37.1247482c-0.0205002-0.2118988-0.1084023-0.4115982-0.2505035-0.5702972   c-3.5253983-3.9286995-8.8290977-7.2862015-14.9379997-9.4556007c-0.4325829-0.1513996-0.7958984-0.4561005-1.0248985-0.8521004   c-0.0126839-0.0760994-0.0346832-0.1518002-0.0663986-0.2259998c-0.2089996-0.4902992-0.0508003-1.0694008,0.4057999-1.3999004   c3.2474976-2.5341988,5.1865005-6.6703987,5.1865005-11.0639992c0-7.4614005-5.4863014-13.5317001-12.2295017-13.5317001   S19.7709217,6.0954499,19.7709217,13.5568504c0,4.4785004,1.9922009,8.6366997,5.3501015,11.1387005   c0.4102001,0.2894993,0.5741997,0.8275986,0.4038143,1.3002987c-0.0098152,0.019001-0.0185146,0.0384998-0.0273151,0.0580997   c-0.1968002,0.4590015-0.5776844,0.8149014-1.0468998,0.9785004c-6.1875,2.1714001-11.5562,5.5532017-15.1166992,9.5220013   c-0.142086,0.158699-0.2300005,0.3583984-0.2505007,0.5702972c-0.6187,6.3252029,2.3207998,13.1025009,7.8671999,18.1328011   c0.6420994,0.5765991,1.4228001,0.9971008,2.2646008,1.2178001c4.0629997,1.0376015,8.4228992,1.5560989,12.7841988,1.5560989   c4.3779011,0,8.7572994-0.5228996,12.8369007-1.5682983c0.8003006-0.2120018,1.5522995-0.6176987,2.1791992-1.1767998   C52.5819206,50.2575493,55.5355225,43.4679489,54.9169235,37.1247482z M45.6801224,53.7990494   c-0.3886986,0.3466988-0.857399,0.5996017-1.347702,0.7294998c-7.8212967,2.0054016-16.7958984,2.0093002-24.6161976,0.0116997   c-0.5293007-0.1386986-1.023901-0.4053001-1.4267006-0.7665977c-4.9794998-4.5166016-7.6704998-10.5219994-7.2451992-16.1289024   c3.3403997-3.6176987,8.3213005-6.7094994,14.0655136-8.7255993c0.9632854-0.3349991,1.7538853-1.0546989,2.1830864-1.9828987   c0.0170994-0.0307999,0.0326996-0.0630016,0.0467987-0.0957012c0.575201-1.3486004,0.1265011-2.9379997-1.0458851-3.7631989   c-2.8325138-2.1113014-4.5239143-5.6704006-4.5239143-9.5205002c0-6.3594003,4.5893993-11.5327005,10.2299995-11.5327005   c5.6410999,0,10.2305012,5.1733003,10.2305012,11.5327005c0,3.7826996-1.6514015,7.3295994-4.3871994,9.4652996   c-1.1060028,0.7984009-1.5567017,2.1875-1.1597023,3.4692993c0.0063171,0.1152,0.0331993,0.2290001,0.0786018,0.3348999   c0.4320984,1.0098,1.2719994,1.7968998,2.3008003,2.1578007c5.6674995,2.0121994,10.5863991,5.0810013,13.8925972,8.6605988   C53.381321,43.2677498,50.6771202,49.2843513,45.6801224,53.7990494z" />
+                      <path
+                        d="M35.9999237,62.0744514h-8.0000019c-0.5248985,0-0.9501991,0.4252968-0.9501991,0.9501991   c0,0.5248985,0.4253006,0.9501991,0.9501991,0.9501991h8.0000019c0.5249138,0,0.9501991-0.4253006,0.9501991-0.9501991   C36.9501228,62.4997482,36.5248375,62.0744514,35.9999237,62.0744514z" />
+                    </g>
+                  </svg>
+                  <span>18 chosen</span>
+                </div>
+              </div>
+            </div><div class="eachReward box eachRewardMain" id="reward6">
+              <div class="top">
+                <img src="/img/eliott-reyna-jCEpN62oWL4-unsplash.jpg" alt="reward-img" class="reward-img" />
+              </div>
+              <div class="reward-ctn">
+                <div class="reward-title rhodium">Rhodium Sponsors</div>
+                <div class="reward-description">
+                  WHOOOOOOOA!!! You are amazing! And so you deserve an amazing reward. You will get all the rewards above (social media
+                  shout-out, our shout-out messages, two special T-shirts from our team, a special badge attached to your profile, and a
+                  six-month free subscription for you or any designated fellow to stand in your place). You will forever be remembered in
+                  our success story.
+
+                </div>
+                <button class="secondary-btn btn">5000$ and above</button>
+                <div class="reward-details flex">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1"
+                    x="0px" y="0px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                    <g id="Bust">
+                      <path
+                        d="M54.9169235,37.1247482c-0.0205002-0.2118988-0.1084023-0.4115982-0.2505035-0.5702972   c-3.5253983-3.9286995-8.8290977-7.2862015-14.9379997-9.4556007c-0.4325829-0.1513996-0.7958984-0.4561005-1.0248985-0.8521004   c-0.0126839-0.0760994-0.0346832-0.1518002-0.0663986-0.2259998c-0.2089996-0.4902992-0.0508003-1.0694008,0.4057999-1.3999004   c3.2474976-2.5341988,5.1865005-6.6703987,5.1865005-11.0639992c0-7.4614005-5.4863014-13.5317001-12.2295017-13.5317001   S19.7709217,6.0954499,19.7709217,13.5568504c0,4.4785004,1.9922009,8.6366997,5.3501015,11.1387005   c0.4102001,0.2894993,0.5741997,0.8275986,0.4038143,1.3002987c-0.0098152,0.019001-0.0185146,0.0384998-0.0273151,0.0580997   c-0.1968002,0.4590015-0.5776844,0.8149014-1.0468998,0.9785004c-6.1875,2.1714001-11.5562,5.5532017-15.1166992,9.5220013   c-0.142086,0.158699-0.2300005,0.3583984-0.2505007,0.5702972c-0.6187,6.3252029,2.3207998,13.1025009,7.8671999,18.1328011   c0.6420994,0.5765991,1.4228001,0.9971008,2.2646008,1.2178001c4.0629997,1.0376015,8.4228992,1.5560989,12.7841988,1.5560989   c4.3779011,0,8.7572994-0.5228996,12.8369007-1.5682983c0.8003006-0.2120018,1.5522995-0.6176987,2.1791992-1.1767998   C52.5819206,50.2575493,55.5355225,43.4679489,54.9169235,37.1247482z M45.6801224,53.7990494   c-0.3886986,0.3466988-0.857399,0.5996017-1.347702,0.7294998c-7.8212967,2.0054016-16.7958984,2.0093002-24.6161976,0.0116997   c-0.5293007-0.1386986-1.023901-0.4053001-1.4267006-0.7665977c-4.9794998-4.5166016-7.6704998-10.5219994-7.2451992-16.1289024   c3.3403997-3.6176987,8.3213005-6.7094994,14.0655136-8.7255993c0.9632854-0.3349991,1.7538853-1.0546989,2.1830864-1.9828987   c0.0170994-0.0307999,0.0326996-0.0630016,0.0467987-0.0957012c0.575201-1.3486004,0.1265011-2.9379997-1.0458851-3.7631989   c-2.8325138-2.1113014-4.5239143-5.6704006-4.5239143-9.5205002c0-6.3594003,4.5893993-11.5327005,10.2299995-11.5327005   c5.6410999,0,10.2305012,5.1733003,10.2305012,11.5327005c0,3.7826996-1.6514015,7.3295994-4.3871994,9.4652996   c-1.1060028,0.7984009-1.5567017,2.1875-1.1597023,3.4692993c0.0063171,0.1152,0.0331993,0.2290001,0.0786018,0.3348999   c0.4320984,1.0098,1.2719994,1.7968998,2.3008003,2.1578007c5.6674995,2.0121994,10.5863991,5.0810013,13.8925972,8.6605988   C53.381321,43.2677498,50.6771202,49.2843513,45.6801224,53.7990494z" />
+                      <path
+                        d="M35.9999237,62.0744514h-8.0000019c-0.5248985,0-0.9501991,0.4252968-0.9501991,0.9501991   c0,0.5248985,0.4253006,0.9501991,0.9501991,0.9501991h8.0000019c0.5249138,0,0.9501991-0.4253006,0.9501991-0.9501991   C36.9501228,62.4997482,36.5248375,62.0744514,35.9999237,62.0744514z" />
+                    </g>
+                  </svg>
+                  <span>18 chosen</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- <section class="width mainSection" id="activity">
+          <div class="activity">
+            <div class="eachActivity box">
+              <div class="activity-img">
+                <img
+                  src="/img/eliott-reyna-jCEpN62oWL4-unsplash.jpg"
+                  alt="urhobo dictionary event"
+                />
+              </div>
+              <div class="activity-details">
+                <div class="date-created">24 May 2022</div>
+                <h3>Yikes - we are reaching for the stars!!!</h3>
+                <p>
+                  i am so stoked to have reached the stretched goal of $3000
+                  over night!!hopefully popping into the studio tomorrow to
+                  record some more songs 🕺🏽thanks so everyone who has been
+                  donating, you are truly...
+                </p>
+              </div>
+              <hr />
+              <div class="activity-buttons flex">
+                <button class="primary-btn btn flex">
+                  <img src="https://img.icons8.com/metro/26/ffffff/share.png" />
+                  <span>share</span>
+                </button>
+                <button class="primary-btn btn">Read More</button>
+              </div>
+            </div>
+            <div class="eachActivity box">
+              <div class="activity-img">
+                <img
+                  src="/img/eliott-reyna-jCEpN62oWL4-unsplash.jpg"
+                  alt="urhobo dictionary event"
+                />
+              </div>
+              <div class="activity-details">
+                <div class="date-created">24 May 2022</div>
+                <h3>Yikes - we are reaching for the stars!!!</h3>
+                <p>
+                  i am so stoked to have reached the stretched goal of $3000
+                  over night!!hopefully popping into the studio tomorrow to
+                  record some more songs 🕺🏽thanks so everyone who has been
+                  donating, you are truly...
+                </p>
+              </div>
+              <hr />
+              <div class="activity-buttons flex">
+                <button class="primary-btn btn flex">
+                  <img src="https://img.icons8.com/metro/26/ffffff/share.png" />
+                  <span>share</span>
+                </button>
+                <button class="primary-btn btn">Read More</button>
+              </div>
+            </div>
+          </div>
+        </section> -->
+        <section class="width mainSection" id="community">
+          <nav class="scroll">
+            <ul class="flex">
+              <li class="active" target="comment-section">
+                <p>Comments <span id="noofcomments" class="notice">20</span></p>
+              </li>
+              <li target="supporters">
+                <p>
+                  Supporters <span id="noofsupporters" class="notice">20</span>
+                </p>
+              </li>
+            </ul>
+          </nav>
+          <div id="comment-section" class="communityDivs active">
+            <div id="comment-divs" class="grid"></div>
+            <div class="make-comment">
+              <form class="grid commentform">
+                <label for="comment-email"
+                  >Name <span class="red">*</span></label
+                >
+                <input
+                  type="text"
+                  name=""
+                  id="comment-email"
+                  value=""
+                  placeholder="urhobo D"
+                  required
+                />
+                <label for="comment-email"
+                  >Email <span class="red">*</span></label
+                >
+                <input
+                  type="email"
+                  name=""
+                  id="comment-email"
+                  value=""
+                  placeholder="support@urhobodictionaryapp.com"
+                  required
+                  maxlength="24"
+                />
+                <label for="comment-input"
+                  >Comment <span class="red">*</span></label
+                >
+                <textarea
+                  type="text"
+                  name=""
+                  id="comment-input"
+                  minlength="5"
+                  maxlength="200"
+                  required
+                >
+</textarea
+                >
+                <div class="button-section flex">
+                  <div class="spiner active"><span></span></div>
+                  <button type="submit" class="btn primary-btn">Post</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div id="supporters" class="communityDivs grid">
+            <h2 class="flex">
+              <span id="number-of-supporters"></span> people are supporting
+              Urhobo Dictionary
+            </h2>
+            <div class="supporters grid"></div>
+            <!-- <button class="primary-btn btn">Load More</button> -->
+            <div id="hidden-supporters">
+              including <span id="hidden-supporter"></span> anonymous
+              supporters
+            </div>
+          </div>
+        </section>
+        <!-- <div class="app-section">
+          <div class="big-text">Try the Urhobo Dictionary App today</div>
+          <div class="some-text">
+            Contains Thousands Of Words and Meaning in different languages with
+            Audio Voice Support Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Nulla, rerum.
+          </div>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.ensontech.urhobodictionary"
+          >
+            <button class="primary-btn btn">Download for android</button>
+          </a>
+        </div> -->
+        <!-- <section class="width">
+          <h2>Recent Activities</h2>
+        </section> -->
+      </section>
+
+      <div class="selected-reward">
+        <div class="closeReward flex secondary"><span class="box btn">close</span></div>
+        <section>
+          <section class="rewards-display pledge hide-onSmall">
+            <div class="grid2">
+              <div class="reward-list grid"><h3>Reward for Donating</h3>
+                <ul id="popupRewardUl">
+                  <li targetReward="reward1">
+                  <div class="rewardValue"t activeColor="silver">1-10$</div>
+                  <div class="rewardTag">Silver</div>
+                </li>
+                <li targetReward="reward2">
+                  <div class="rewardValue" activeColor=" iridium">10-50$</div>
+                  <div class="rewardTag">Iridium</div>
+                </li>
+                <li targetReward="reward3">
+                  <div class="rewardValue" activeColor=" ruthenium">50-100$</div>
+                  <div class="rewardTag">Ruthenium</div>
+                </li>
+                <li targetReward="reward4">
+                  <div class="rewardValue"t activeColor="gold">100-500$</div>
+                  <div class="rewardTag">Gold</div>
+                </li>
+                <li targetReward="reward5">
+                  <div class="rewardValue" activeColor=" platinium">$1000 and above</div>
+                  <div class="rewardTag">Platinium</div>
+                </li>
+                <li targetReward="reward6">
+                  <div class="rewardValue" activeColor=" rhodium">$5000 and above</div>
+                  <div class="rewardTag">Rhodium</div>
+                </li>
+                </ul>
+              </div>
+              <div class="reward-content">
+                <h3 id="rewardType"></h3>
+              <div id="reward-selectedDiv">
+              </div>
+              <form id="supportForm">
+              <div class="supporterDetails grid"><label for="supporteramount">Amount ($)<span class="red">*</span></label>
+              <input type="number" name="" id="supporteramount" placeholder="$5000" required min="
+              1" maxlength="10"><label for="supportername" required>Name <span class="red">*</span></label>
+              <input maxlength="20" type="text" name="" id="supportername" placeholder="Your name pls" required><label for="supporteremail">Email <span class="red">*</span></label>
+                <input maxlength="100" type="email" name="" placeholder="How we can reach you" id="supporteremail" required>
+              </div>
+              <div class="requestpayment flex">
+                <div class="anonymous flex">
+                  <input type="checkbox" name="" id="anonymous"> <span> Don't list my pledge publicly</span>
+                </div>
+                <button class="primary-btn btn">Proceed to Sponsor</button>
+              </div>
+              </form>
+              </div>
+            </div>
+          </section>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="top flex">
+        <div class="top-left socials">
+          <ul class="flex">
+            <li>
+              <a href="https://web.facebook.com/urhobodictionaryapp">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1"
+                  x="0px" y="0px" viewBox="0 0 310 310" style="enable-background:new 0 0 310 310;" xml:space="preserve">
+                  <g id="XMLID_834_">
+                    <path id="XMLID_835_"
+                      d="M81.703,165.106h33.981V305c0,2.762,2.238,5,5,5h57.616c2.762,0,5-2.238,5-5V165.765h39.064   c2.54,0,4.677-1.906,4.967-4.429l5.933-51.502c0.163-1.417-0.286-2.836-1.234-3.899c-0.949-1.064-2.307-1.673-3.732-1.673h-44.996   V71.978c0-9.732,5.24-14.667,15.576-14.667c1.473,0,29.42,0,29.42,0c2.762,0,5-2.239,5-5V5.037c0-2.762-2.238-5-5-5h-40.545   C187.467,0.023,186.832,0,185.896,0c-7.035,0-31.488,1.381-50.804,19.151c-21.402,19.692-18.427,43.27-17.716,47.358v37.752H81.703   c-2.762,0-5,2.238-5,5v50.844C76.703,162.867,78.941,165.106,81.703,165.106z" />
+                  </g>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/LearnUrhoboApp">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1"
+                  x="0px" y="0px" viewBox="0 0 310 310" style="enable-background:new 0 0 310 310;" xml:space="preserve">
+                  <g id="XMLID_826_">
+                    <path id="XMLID_827_"
+                      d="M302.973,57.388c-4.87,2.16-9.877,3.983-14.993,5.463c6.057-6.85,10.675-14.91,13.494-23.73   c0.632-1.977-0.023-4.141-1.648-5.434c-1.623-1.294-3.878-1.449-5.665-0.39c-10.865,6.444-22.587,11.075-34.878,13.783   c-12.381-12.098-29.197-18.983-46.581-18.983c-36.695,0-66.549,29.853-66.549,66.547c0,2.89,0.183,5.764,0.545,8.598   C101.163,99.244,58.83,76.863,29.76,41.204c-1.036-1.271-2.632-1.956-4.266-1.825c-1.635,0.128-3.104,1.05-3.93,2.467   c-5.896,10.117-9.013,21.688-9.013,33.461c0,16.035,5.725,31.249,15.838,43.137c-3.075-1.065-6.059-2.396-8.907-3.977   c-1.529-0.851-3.395-0.838-4.914,0.033c-1.52,0.871-2.473,2.473-2.513,4.224c-0.007,0.295-0.007,0.59-0.007,0.889   c0,23.935,12.882,45.484,32.577,57.229c-1.692-0.169-3.383-0.414-5.063-0.735c-1.732-0.331-3.513,0.276-4.681,1.597   c-1.17,1.32-1.557,3.16-1.018,4.84c7.29,22.76,26.059,39.501,48.749,44.605c-18.819,11.787-40.34,17.961-62.932,17.961   c-4.714,0-9.455-0.277-14.095-0.826c-2.305-0.274-4.509,1.087-5.294,3.279c-0.785,2.193,0.047,4.638,2.008,5.895   c29.023,18.609,62.582,28.445,97.047,28.445c67.754,0,110.139-31.95,133.764-58.753c29.46-33.421,46.356-77.658,46.356-121.367   c0-1.826-0.028-3.67-0.084-5.508c11.623-8.757,21.63-19.355,29.773-31.536c1.237-1.85,1.103-4.295-0.33-5.998   C307.394,57.037,305.009,56.486,302.973,57.388z" />
+                  </g>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/urho.bodictionaryapp/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
+                  <path
+                    d="M17.3183118,0.0772036939 C18.5358869,0.132773211 19.3775594,0.311686093 20.156489,0.614412318 C20.9357539,0.917263935 21.5259307,1.30117806 22.1124276,1.88767349 C22.6988355,2.47414659 23.0827129,3.06422396 23.3856819,3.84361655 C23.688357,4.62263666 23.8672302,5.46418415 23.9227984,6.68172489 C23.9916356,8.19170553 24,8.72394829 24,11.9999742 C24,15.2760524 23.9916355,15.808302 23.9227954,17.3182896 C23.8672306,18.5358038 23.6883589,19.3773584 23.3855877,20.1566258 C23.0826716,20.9358162 22.6987642,21.5259396 22.1124276,22.1122749 C21.5259871,22.6987804 20.9357958,23.0827198 20.1563742,23.3856323 C19.3772192,23.6883583 18.5357324,23.8672318 17.3183209,23.9227442 C15.8086874,23.9916325 15.2765626,24 12,24 C8.72343739,24 8.19131258,23.9916325 6.68172382,23.9227463 C5.46426077,23.8672314 4.62270711,23.6883498 3.84342369,23.3855738 C3.0641689,23.0827004 2.47399369,22.6987612 1.88762592,22.1123283 C1.30117312,21.525877 0.91721975,20.9357071 0.614318116,20.1563835 C0.311643016,19.3773633 0.132769821,18.5358159 0.0772038909,17.3183251 C0.0083529426,15.8092887 0,15.2774634 0,11.9999742 C0,8.7225328 0.00835296697,8.19071076 0.0772047368,6.68165632 C0.132769821,5.46418415 0.311643016,4.62263666 0.614362729,3.84350174 C0.91719061,3.06430165 1.30113536,2.4741608 1.88757245,1.88772514 C2.47399369,1.30123879 3.0641689,0.917299613 3.84345255,0.614414972 C4.62236201,0.311696581 5.46409415,0.132773979 6.68163888,0.0772035898 C8.19074867,0.00835221992 8.72252573,0 12,0 C15.2774788,0 15.8092594,0.00835235053 17.3183118,0.0772036939 Z M12,2.66666667 C8.75959504,2.66666667 8.26400713,2.67445049 6.80319929,2.74109814 C5.87614637,2.78341009 5.31952221,2.90172878 4.80947575,3.09995521 C4.37397765,3.26922052 4.09725505,3.44924273 3.77324172,3.77329203 C3.44916209,4.09737087 3.26913181,4.37408574 3.09996253,4.80937168 C2.90169965,5.31965737 2.78340891,5.87618164 2.74109927,6.80321713 C2.67445122,8.26397158 2.66666667,8.75960374 2.66666667,11.9999742 C2.66666667,15.2403924 2.67445121,15.7360281 2.74109842,17.1967643 C2.78340891,18.1238184 2.90169965,18.6803426 3.09990404,19.1904778 C3.26914133,19.6259017 3.44919889,19.9026659 3.77329519,20.2267614 C4.09725505,20.5507573 4.37397765,20.7307795 4.80932525,20.8999863 C5.31971515,21.0982887 5.87621193,21.2165784 6.80323907,21.2588497 C8.26460439,21.3255353 8.76051223,21.3333333 12,21.3333333 C15.2394878,21.3333333 15.7353956,21.3255353 17.1968056,21.2588476 C18.123775,21.216579 18.6802056,21.0982995 19.1905083,20.9000309 C19.6260288,20.7307713 19.9027426,20.5507596 20.2267583,20.226708 C20.5507492,19.9027179 20.7308046,19.6259456 20.9000375,19.1906283 C21.0983009,18.6803412 21.2165908,18.1238118 21.2588986,17.196779 C21.3255376,15.7350718 21.3333333,15.2390126 21.3333333,11.9999742 C21.3333333,8.76098665 21.3255376,8.26493375 21.2589016,6.80323567 C21.2165911,5.87618164 21.0983004,5.31965737 20.9001178,4.80957831 C20.7308131,4.37403932 20.550774,4.09729207 20.2267583,3.77324038 C19.9027658,3.44924868 19.6260264,3.26922777 19.1905015,3.09996643 C18.6803988,2.90171817 18.1238378,2.78341062 17.1967608,2.74109868 C15.7359966,2.67445057 15.2404012,2.66666667 12,2.66666667 Z M12,18.2222222 C8.56356156,18.2222222 5.77777778,15.4364384 5.77777778,12 C5.77777778,8.56356156 8.56356156,5.77777778 12,5.77777778 C15.4364384,5.77777778 18.2222222,8.56356156 18.2222222,12 C18.2222222,15.4364384 15.4364384,18.2222222 12,18.2222222 Z M12,15.5555556 C13.9636791,15.5555556 15.5555556,13.9636791 15.5555556,12 C15.5555556,10.0363209 13.9636791,8.44444444 12,8.44444444 C10.0363209,8.44444444 8.44444444,10.0363209 8.44444444,12 C8.44444444,13.9636791 10.0363209,15.5555556 12,15.5555556 Z M18.2222222,7.11111111 C17.4858426,7.11111111 16.8888889,6.51415744 16.8888889,5.77777778 C16.8888889,5.04139811 17.4858426,4.44444444 18.2222222,4.44444444 C18.9586019,4.44444444 19.5555556,5.04139811 19.5555556,5.77777778 C19.5555556,6.51415744 18.9586019,7.11111111 18.2222222,7.11111111 Z" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="share-cover"></div>
+        <div class="share-modal">
+          <h3>Spread the word</h3>
+          <ul>
+            <li>fb</li>
+            <li>fb</li>
+            <li>fb</li>
+          </ul>
+        </div>
+        <!-- <form class="news-letter flex">
+          <label for="newsletter">newsletter</label>
+          <input
+            type="email"
+            name=""
+            id="newsletter"
+            placeholder="your email"
+            required
+          />
+          <button class="primary-btn btn" type="submit">Subscribe</button>
+        </form> -->
+      </div>
+      <div class="buttom grid2">
+        <div class="left flex">
+          <div class="logo">
+            <img
+              src="/img/urhoboDictionary-logo-blue1.png"
+              alt="urhobodictionary logo"
+            />
+            <h2>urhoboDictionary</h2>
+          </div>
+          <div class="text">
+            Making the learning of Urhobo Worth learning, Enjoyable, Easy and
+            Bringing it to Your Finger Tip with Interactive Online Quiz.
+          </div>
+        </div>
+        <div class="right grid2">
+          <div class="location">
+            <b>Office</b>
+            <p>No. 24 Iyeghe Street Aladja Town, Udu Delta State Nigeria.</p>
+          </div>
+          <div class="contact">
+            <b>Contact</b>
+            <p>
+              <span>
+                <a href="mailto:support@urhobodictionaryapp.com"
+                  >support@urhobodictionaryapp.com</a
+                >
+              </span>
+              <span>or</span>
+              <span>
+                <a href="mailto:urhobodictionaryappsupport@gmail.com"
+                  >urhobodictionaryappsupport@gmail.com</a
+                ></span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="loading">
+      <div class="grid">
+        <div class="lds-ripple">
+        <div></div>
+        <div></div>
+      </div>
+     <span>Loading</span>
+      </div>
+      
+    </div>
+    <div class="popup" id="popup">
+                <div class="popupcover" onclick="popup()"></div>
+                <div class="popupDiv">
+                    <div class="closeBtn" onclick="popup()">
+                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" style="display: block">
+                <g class="style-scope yt-icon">
+                  <path
+                    d="M12.7,12l6.6,6.6l-0.7,0.7L12,12.7l-6.6,6.6l-0.7-0.7l6.6-6.6L4.6,5.4l0.7-0.7l6.6,6.6l6.6-6.6l0.7,0.7L12.7,12z"
+                    class="style-scope yt-icon"
+                  ></path>
+                </g>
+              </svg>
+                    </div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/PJHp0A5gu4A?autoplay=0&cc_load_policy=1&controls=1&disablekb=0&enablejsapi=1&fs=1&iv_load_policy=1&loop=1&rel=0&showinfo=0&start=0&wmode=transparent&theme=dark&mute=0&modestbranding=1"
+                        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="iframe1"></iframe>
+                </div>
+            </div>
+    <noscript> javascript is required </noscript>
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="/js/index.js" defer></script>
+  </body>
+</html>
