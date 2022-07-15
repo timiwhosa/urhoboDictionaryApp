@@ -154,9 +154,15 @@
         .secondary-btn:hover {
             box-shadow: -5px -5px 14px -7px #cb2f00, 0px 10px 14px -7px #cb2f00;
         }
+        body>*{
+            opacity: 1;
+        }
         body.loading{
             overflow: hidden;
             height: 100vh;
+        }
+        body.loading> *:not(.loading-anim){
+            opacity: 0;
         }
         .loading-anim{
             height: 100vh;
@@ -170,8 +176,8 @@
             align-items: center;
             color: white;
             text-align: center;
-            transition: all ease-in-out 1s;
-            animation: shrink 1s linear 1s forwards;
+            transition: all ease-in-out 2s;
+            animation: shrink 1s linear 2s forwards;
             z-index: 9999;
             /* animation: name duration timing-function delay iteration-count direction fill-mode; */
         }
@@ -184,7 +190,7 @@
             max-height: 150px;
             transform: scale(0.3);
             opacity: 0;
-            animation: scale 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
+            animation: scale 2s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
         }
         .loading-anim h2{
             font-size: 25px;
@@ -271,6 +277,15 @@
             padding: 10px 20px;
             width: max-content ;
             max-width: max-content ;
+            transition: all ease-in-out .2s;
+           box-shadow:-5px -5px 14px -7px #00000047, 0px 10px 14px -7px #1717177a;
+        }
+
+        header button.btn:active {
+            background-color: rgb(51, 51, 51);
+        }
+        header button.btn:hover {
+            box-shadow: -5px -5px 14px -7px #000000, 0px 10px 14px -7px #171717;
         }
         header .header-img{
             height: 100%;
@@ -622,7 +637,7 @@
         .fade-in{
             /* opacity: 0; */
             transform: translateY(-30px);
-            animation: fadeIn 1s linear 2s forwards;
+            animation: fadeIn 1s linear 3s forwards;
             /* transition: all ease-in-out .2s; */
         }
 
@@ -712,9 +727,12 @@
                 left: 0;
                 width:100vw;
                 height: 100vh;
-                background-color: var(--borderColor);
+                background-color: var(--boxShadowNeutral);
                 z-index: 9999;
                 display: none;
+            }
+            .side-cover.active{
+                display: block;
             }
             .side-nav{
                 position: fixed;
@@ -723,21 +741,41 @@
                 left: 0;
                 width: 50%;
                 height: 100vh;
-                display: flex;
                 align-items: center;
                 justify-content: center;
                 background-color: white;
                 box-shadow: 0 0 25px var(--boxShadowNeutral);
                 display: none;
             }
+            .side-nav.active{
+                display: flex;
+            }
             .side-nav ul li{
                 padding: 0 0 5vh;
+            }
+            .ill{
+                position: relative;
+            }
+            .ill::before{
+                content: "";
+                width: 100%;
+                position: absolute;
+                height: 40%;
+                border-top: 24px solid #fc9b7e;
+                border-radius: 114px;
+                bottom: -29%;
+                z-index: -1;
+            }
+            @media screen and (max-width: 560px) {
+                .ill::before{
+                    border-top: 10px solid #fc9b7e;
+                } 
             }
         </style>
     </div>
     <header class="fade-in">
         <div class="header-ctn">
-            <h1>Learn Urhobo Language from the Comfort of your home</h1>
+            <h1>Learn <span class="ill">Urhobo</span> Language from the Comfort of your home</h1>
             <p>
                 Your one stop App for learning Urhobo Langauge
             </p>
@@ -1138,7 +1176,11 @@
     <script>
         setTimeout(() => {
             document.body.classList.remove("loading");
-            window.scroll(0,0)
+            if(window.scrollY < (document.body.clientHeight/30)){
+                window.scroll(0, 0)
+            }else{
+                document.documentElement.scroll(0,0)
+            }
         }, 2000)
         let overlay = document.querySelector(".overlay");
         let overlayCtn = document.querySelector(".overlay-ctn");
@@ -1162,6 +1204,26 @@
         setTimeout(() => {
             showOverlay()
         }, timeout);
+
+
+        // side-nav
+        let sideNav = document.querySelector(".side-nav")
+        let sideNavCover = document.querySelector(".side-cover")
+        let menu = document.querySelector(".menu")
+        function showSidenav() {
+                sideNav.classList.add("active");
+                sideNavCover.classList.add("active");
+            }
+            function hideSidenav() {
+                sideNav.classList.remove("active");
+                sideNavCover.classList.remove("active");
+            }
+            sideNavCover.addEventListener("click", () => {
+                hideSidenav()
+            })
+            menu.addEventListener("click", () => {
+                showSidenav()
+            })
     </script>
     <style>
         .overlay{
