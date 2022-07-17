@@ -409,11 +409,11 @@
             justify-items: flex-start;
         }
         .sweet-section .sweet-img img{
-            width: auto;
+            width: 100%;
             object-fit: cover;
             display: block;
             /* margin: 0 auto; */
-            height: 60%;
+            height: auto;
         }
         .sweet-section .sweet-main{
             display: grid;
@@ -581,6 +581,9 @@
             }
             nav .logo-section{
                 line-height: 22px;
+            }
+            nav .logo-section span{
+                max-width: 200px;
             }
             nav .links li{
                 display: none;
@@ -1174,7 +1177,7 @@
             <div class="team-div">
                 <div class="member">
                     <div class="head">
-                        <img src="/img/ud/team/team1.png" alt="team member">
+                        <img src="/img/ud/team/team1.svg" alt="team member">
                     </div>
                     <div class="details">
                         <div class="grid2">
@@ -1195,7 +1198,7 @@
                 </div>
                 <div class="member">
                     <div class="head">
-                        <img src="/img/ud/team/team2.png" alt="team member">
+                        <img src="/img/ud/team/team2.svg" alt="team member">
                     </div>
                     <div class="details">
                         <div class="grid2">
@@ -1216,7 +1219,7 @@
                 </div>
                 <div class="member">
                     <div class="head">
-                        <img src="/img/ud/team/team3.png" alt="team member">
+                        <img src="/img/ud/team/team3.svg" alt="team member">
                     </div>
                     <div class="details">
                         <div class="grid2">
@@ -1237,7 +1240,7 @@
                 </div>
                 <div class="member">
                     <div class="head">
-                        <img src="/img/ud/team/team4.png" alt="team member">
+                        <img src="/img/ud/team/team4.svg" alt="team member">
                     </div>
                     <div class="details">
                         <div class="grid2">
@@ -1258,7 +1261,7 @@
                 </div>
                 <div class="member">
                     <div class="head">
-                        <img src="/img/ud/team/team5.png" alt="team member">
+                        <img src="/img/ud/team/team5.svg" alt="team member">
                     </div>
                     <div class="details">
                         <div class="grid2">
@@ -1315,7 +1318,7 @@
         overlayClose.addEventListener("click", () => {
             hideOverlay()
         })
-        var timeout = 2*60*1000
+        var timeout = 20*1000
         setTimeout(() => {
             showOverlay()
         }, timeout);
@@ -1475,7 +1478,7 @@
                 grid-gap: 20px;
             }
             .our-team .team-div .member .head img{
-                height:80vw;
+                height:100vw;
             }
             .our-team .team-div .member .details{
                 padding: 20px 10px;
