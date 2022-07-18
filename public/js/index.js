@@ -9,14 +9,14 @@ shareBtns.forEach((btn) => {
     btn.addEventListener("click", () => shareLink());
 });
 var shareLink = () => {
-    var shareModal = document.querySelector(".share-modal");
-    var shareCover = document.querySelector(".share-cover");
-    shareCover.addEventListener("click", () =>
-        closeShare(shareModal, shareCover)
-    );
+    // var shareModal = document.querySelector(".share-modal");
+    // var shareCover = document.querySelector(".share-cover");
+    // shareCover.addEventListener("click", () =>
+    //     closeShare(shareModal, shareCover)
+    // );
     navigator && navigator.share ?
         (() => {
-            // share api
+            // share api 
             navigator
                 .share({
                     title: title,
@@ -30,8 +30,11 @@ var shareLink = () => {
         })() :
         (() => {
             // manual share
-            shareModal.classList.add("active");
-            shareCover.classList.add("active");
+            let link = window.location.href;
+            let newShareText = "";
+            newShareText += link + "\n" + text;
+            navigator.clipboard.writeText(newShareText);
+            alert("link copied");           
         })();
 };
 
