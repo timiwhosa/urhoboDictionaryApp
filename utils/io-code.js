@@ -1,5 +1,8 @@
 const { isValidObjectId } = require("mongoose");
 const { RateLimiterMemory } = require("rate-limiter-flexible");
+const hostUrl  = process.env.hostUrl;
+const paymentRedirectUrl =
+  process.env.paymentRedirectUrl || "http://urhobodictionary.herokuapp.com/user/verifypay";
 
 const validator = require("validator");
 const SocketrateLimiter = new RateLimiterMemory({
@@ -345,21 +348,21 @@ module.exports = async (io, models,escape) => {
                   email: resp.email,
                   amount: resp.nairaAmount * 100,
                   currency: "NGN",
-                  callback_url:
-                    "http://urhobodictionary.herokuapp.com/user/verifypay",
+                  callback_url: `${paymentRedirectUrl}`,
+                  cancel_action: `${hostUrl}`,
                   payment_options: "card",
                   metadata: {
                     consumer_id: resp._id,
                     consumer_mac: "92a3-912ba-1192a",
+                    custom_fields: [
+                      {
+                        display_name: resp.name,
+                      },
+                    ],
                   },
                   customer: {
                     email: resp.email,
                     name: resp.name,
-                  },
-                  customizations: {
-                    title: "Urhobo Dictionary",
-                    description: "Save Urhobo Language",
-                    logo: "http://urhobodictionary.herokuapp.com/img/urhoboDictionary-logo-blue2.png",
                   },
                 };
                 // initializePayment

@@ -80,6 +80,7 @@ app.get("/myip",(req,res)=>{
     })
 })
 
+
 // 404
 app.use((req,res,next)=>{
   res.redirect("/")

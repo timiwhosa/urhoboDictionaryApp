@@ -739,8 +739,8 @@ socket.on("Supporters", (supportersData) => {
     saveSupporters(supportersData, "set");
 });
 socket.on("pledgeLink", (data)=>{
-    if(data.data.link){
-        window.location.href = data.data.authorization_url;
+    if (data.data.authorization_url) {
+      window.location.href = data.data.authorization_url;
     }
 });
 socket.on("error", (error)=>{

@@ -1,5 +1,3 @@
-
-var random;
 const paystack = (io) => {
     const https = require("https");
     const MySecretKey =
@@ -26,7 +24,7 @@ const paystack = (io) => {
                 var response = JSON.parse(data);
                 if (
                   response.status &&
-                  response.message === "Authorization URL created"
+                  response.data.authorization_url 
                 ) {
                   socket.emit("pledgeLink", response);
                 } else {
@@ -53,7 +51,7 @@ const paystack = (io) => {
       const options = {
         hostname: "api.paystack.com",
         port: 443,
-        path: `/transaction/verify/${confirm.transaction_id}`,
+        path: `/transaction/verify/${confirm.trxref}`,
         method: "GET",
         headers: {
           Authorization: MySecretKey,
@@ -66,11 +64,12 @@ const paystack = (io) => {
           data += chunk;
         });
         res.on("end", () => {
-          var response = JSON.parse(data);
+          var response = JSON.parse(JSON.stringify(data));
+          console.log("response:",response)
+          return routerres.end()
           if (
-            response.status === "success" &&
-            response.data.reference === confirm.reference &&
-            parseInt(response.data.id) === parseInt(confirm.transaction_id)
+            response.status &&
+            response.data.reference === confirm.reference
           ) {
             var transactionUpdateMain = transactionData[0];
             Supporters.find().then(async (supporter) => {

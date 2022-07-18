@@ -24,9 +24,10 @@ function RewardForyou(amount){
 }
 
 router.route("/verifypay").get((req, res) => {
-  if ((req.query.status === "cancelled")) return res.redirect("/")
+  // if (req.query.status&& req.query.status === "cancelled")
+  //   return res.redirect("/");
   var confirm = req.query;
-  var transactionId = `${req.query.tx_ref}`;
+  var transactionId = `${req.query.trxref}`;
   if(!transactionId) return res.status(400).json({message: "tx_ref required"});
   try {
     Transaction.find({ _id: transactionId }).then(async (transactionData)=>{
