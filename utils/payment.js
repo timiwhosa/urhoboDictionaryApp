@@ -69,6 +69,7 @@ const paystack = (io) => {
           return routerres.send(response)
           if (
             response.status &&
+            response.data.status === "success" &&
             response.data.reference === confirm.reference
           ) {
             var transactionUpdateMain = transactionData[0];
@@ -93,7 +94,7 @@ const paystack = (io) => {
                     routerres.status(200).redirect("/congrats");
                   })
                   .catch((err) => {
-                    console.error(err)
+                    console.error(err);
                   });
               };
               var transactionUpdate = transactionUpdateMain;
