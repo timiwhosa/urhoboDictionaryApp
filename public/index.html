@@ -361,12 +361,17 @@
         }
         .sweet-section{
             display: grid;
-            grid-template-columns: repeat(2,1fr);
             width: 100%;
             align-items: center;
             min-height: 80vh;
             grid-gap: 4vw;
             position: relative;
+        }
+        .sweet-section:nth-child(odd){
+            grid-template-columns: 1.5fr 1fr;
+        }
+        .sweet-section:nth-child(even){
+            grid-template-columns:1fr 1.5fr;
         }
         .sweet-section::before{
             content: "";
@@ -414,6 +419,10 @@
             display: block;
             /* margin: 0 auto; */
             height: auto;
+        }
+        .sweet-section:nth-child(7) .sweet-img img, .sweet-section:nth-child(8) .sweet-img img{
+            width: auto;
+            height: 80%;
         }
         .sweet-section .sweet-main{
             display: grid;
@@ -893,7 +902,7 @@
             </a>
         </div>
         <div class="header-img app-img">
-            <img  loading="lazy" src="/img/ud/screens/clean/mobile-app.png" alt="urhobodictionary app img">
+            <img  loading="lazy" src="/img/ud/screens/mobile-app.png" alt="urhobodictionary app img">
         </div>
     </header>
     <div class="site-stats flex">
@@ -1279,6 +1288,26 @@
                             Web Developer and Entrepreneur
                         </div>
                     </div>
+                </div><div class="member">
+                    <div class="head">
+                        <img src="/img/ud/team/team6.svg" alt="team member">
+                    </div>
+                    <div class="details">
+                        <div class="grid2">
+                            <div class="left">
+                                Iyasere John Ogenekparohwo
+                            </div>
+                            <div class="right">
+                                <ul class="flex">
+                                    <li><a href="#"><img src="/img/sec-svg/instagram.svg" alt="instagram handle"></a></li>
+                                    <li><a href="#"><img src="/img/sec-svg/twitter.svg" alt="twitter handle"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="role">
+                            Urhobo Language Linguist/Translator
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1286,10 +1315,11 @@
     <div class="overlay">
     </div>
     <div class="overlay-ctn">
-        <div class="close"><img src="/img/close-icon.svg" alt="close support div"></div>
-        <h2>The Urhobo language is going into extinction.</h2>
-        <p>Support urhobodictionary app to help save this language</p>
-        <a href="/sponsor"><button class="btn secondary-btn">Support now</button></a>
+        <div class="close"><img src="/img/close-icon.svg" alt="close urhobo support div"></div>
+        <img src="/img/ud/vision.png" alt="save urhobo language">
+        <h2>Join us as we save the urhobo language from going into extinction.</h2>
+        <!-- <p>Support urhobodictionary app to help save this language</p> -->
+        <a href="/sponsor"><button class="btn secondary-btn">Join us now</button></a>
     </div>
     <script>
         setTimeout(() => {
@@ -1373,7 +1403,6 @@
             backdrop-filter: blur(3px);
             z-index: 9999;
             box-shadow:5px 5px 25px var(--darklight);
-            padding: 4vw;
             max-width: 100vw;
         }
         .overlay-ctn.active{
@@ -1381,16 +1410,26 @@
             display: grid;
         }
         .overlay-ctn .close{
-            display: flex;
-            justify-content: flex-end;
+            position: absolute;
+            right: 0;
         }
         .overlay-ctn .close img{
             width: 40px;
             margin: 10px;
             cursor: pointer;
         }
+        .overlay-ctn >img{
+            width: 100%;
+            height: 40vh;
+            max-height: 250px;
+            object-fit: cover;
+        }
+        .overlay-ctn h2{
+            padding: 20px;
+        }
         .overlay-ctn a{
-            margin: 0 auto;
+            display: block;
+            margin: 0 auto 20px;
         }
         .overlay-ctn .btn{
             padding: 20px;
@@ -1423,6 +1462,8 @@
         }
         .our-team .team-div .member{
             transition: all ease-in-out .2s;
+            box-shadow: 0 2px 8px #33333315;
+            border-radius: 0 0 10px 10px;
         }
         .our-team .team-div .member:hover{
             box-shadow: -5px -5px 25px var(--boxShadowNeutral), 
@@ -1443,8 +1484,6 @@
         }
         .our-team .team-div .member .details{
             padding: 2vw 1vw;
-            box-shadow: 0 2px 8px #33333315;
-            border-radius: 0 0 10px 10px;
         }
         .our-team .team-div .member .details .grid2{
             grid-template-columns: 3fr 1fr;
@@ -1456,6 +1495,7 @@
             font-weight: 600;
         }
         .our-team .team-div .member .details .grid2 img{
+            display: none;
             width: 20px;
             opacity: .7;
         }

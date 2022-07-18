@@ -11,7 +11,8 @@
     --boxShadowSecondaryLight: rgba(255, 183, 0, 0.255);
     --boxShadowPrimaryLight2: rgba(0, 46, 163, 0.059);
     --boxShadowSecondaryLight2: rgba(255, 183, 0, 0.059);
-    --textColor: rgba(0, 46, 163, 0.659);
+    /* --textColor: rgba(0, 46, 163, 0.659); */
+    --textColor: #6e6e6e;
     --darklight: #0000008c;
     --bg-img: linear-gradient(rgba(0 0 0 /45%) 35%, rgb(33, 36, 55) 95%), url("/img/assets/urhobo-People.jpg");
 }
@@ -355,8 +356,8 @@ main>nav img {
     height: 100%;
     background: rgba(255, 255, 255, 0.03);
     border-radius: 16px;
-    backdrop-filter: blur(2.6px);
-    -webkit-backdrop-filter: blur(1.6px);
+    /* backdrop-filter: blur(2.6px);
+    -webkit-backdrop-filter: blur(1.6px); */
 }
 
 .header-ctn-left {
@@ -508,7 +509,21 @@ animation: playbtn 2s ease-in .5s infinite;
     background-size: cover;
     background-repeat: no-repeat;
     max-height: 180px;
+    position: relative;
 }
+.header-ctn-right .top .image-div::before{
+    content: "Save Urhobo Language";
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%,-20%);
+    color: white;
+    font-size: 18px;
+    width: 80%;
+    font-weight: 600;
+    text-align: center;
+}
+    
 
 .header-ctn-right .top .text {
     font-weight: 600;
@@ -710,7 +725,7 @@ section #story .story-group {
 
 section #story .story-group h2 {
     font-size: 22px;
-    color: var(--primary);
+    color: var(--textColor);
 }
 
 section #story .story-group p {
@@ -734,11 +749,29 @@ section #story .story-group img {
     max-width: 700px;
 }
 
-section #story .story-group video {
-    width: 80%;
-    height: auto;
+section #story .story-group iframe {
+    max-width: 90vw;
+    max-height: 80vw;
     display: block;
     margin: 0 auto;
+}
+section #story .story-group.increase {
+    justify-content: flex-start;
+}
+
+section #story .story-group.increase ol {
+    min-width: 60vw;
+    margin-left: 20px;
+}
+
+.story-group ol li {
+    list-style: auto;
+}
+
+.story-group ol li div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
 /* reward section */
 

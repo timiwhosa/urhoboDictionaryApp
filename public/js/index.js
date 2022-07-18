@@ -197,11 +197,22 @@ document.getElementById("days-left").innerText = days;
 document.getElementsByClassName("daysleft")[0].innerText = days;
 
 // youtube api
-var tag = document.createElement("script");
-tag.id = "iframe-demo";
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName("script")[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+// window.addEventListener("DOMContentLoaded", ()=>{
+//     var tag = document.createElement("script");
+//     tag.id = "iframe-demo";
+//     tag.src = "https://www.youtube.com/iframe_api";
+//     var firstScriptTag = document.getElementsByTagName("script")[0];
+//     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+// })
+
+setTimeout(() => {
+    var tag = document.createElement("script");
+    tag.id = "iframe-demo";
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName("script")[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    console.log("done")
+}, 700);
 
 var player;
 
