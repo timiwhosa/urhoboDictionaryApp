@@ -66,7 +66,7 @@ const paystack = (io) => {
         res.on("end", () => {
           var response = JSON.parse(JSON.stringify(data));
           console.log("response:",response)
-          return routerres.end()
+          return routerres.send(response)
           if (
             response.status &&
             response.data.reference === confirm.reference
