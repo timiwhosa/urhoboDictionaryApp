@@ -264,6 +264,9 @@ var sectionToshow = (list) => {
         element.classList.remove("active");
     });
     targetsection.classList.add("active");
+    document.documentElement.scrollTop =
+      document.documentElement.clientHeight - 50;
+    
 };
 
 var scroll2 = document.getElementsByClassName("scroll")[1];
