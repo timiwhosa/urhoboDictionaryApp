@@ -1036,95 +1036,243 @@
         Netherlands, Spain, Canada, and others.
     </p>
 
-    <!-- <section class="testimonials">
+    <section class="testimonials">
+        <div>
         <div class="testimonial-heading">
-            <div class="grid2">
+            <div class="flex">
                 <div class="left">
                     <h3>
-                        Satisfied Learners are the Best ads 
+                        Satisfied Learners are our Best ads 
                     </h3>
                 </div>
                 <div class="right">
                     <div class="flex">
-                        <button class="line-btn">left</button>
-                        <button class="line-btn">right</button>
+                        <button class="line-btn"><img src="/img/left.svg" alt="urhobo dictionary button"></button>
+                        <button class="line-btn"><img src="/img/right.svg" alt="urhobo dictionary button"></button>
                     </div>
                 </div>
             </div>
         </div>
         <div class="testimonial-bottom">
+        
             <div class="testimony">
                 <div class="testimony-icon">
-                    hii
+                    <img src="/img/bolt.svg" loading="lazy" alt="urhobo bolt icon"/>
                 </div>
                 <div class="testimony-comment">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic iusto autem porro odit optio, error reprehenderit ipsum quo debitis animi natus modi cupiditate facere ullam rem! Tenetur voluptate quos ipsa, adipisci cupiditate et doloremque eum sequi illum a, quas dolor!
+                    This app is worth 6 stars, with it even an outsider can catch up with urhobo. I strongly recommend this app for children
+                    of urhobo who were not taught while growing up, and also for everyone who knows how to speak, to be able to learn more
+                    and teach others how to spell and write correctly in urhobo.
                 </div>
                 <div class="flex">
                     <div class="circle-img">
                         <img  loading="lazy" src="/img/ud/testimonial/testimonial1.png" alt="">
                     </div>
                     <div class="testimonial-details">
-                        <p class="name">Lorem ipsum dolor sit.</p><p class="role">Lorem ipsum dolor sit.</p><p class="rating">Lorem ipsum dolor sit.</p>
+                        <p class="name">ADIGHO JEREMIAH.</p>
+                        <p class="role">user</p>
+                        <p class="rating"><img loading="lazy" src="/img/5star.svg" alt="urhobo dictionary 5star rating"></p>
+                    </div>
+                </div>
+            </div>
+            <style>
+                .testimonials{
+                    width: 100vw;
+                    padding: 0 10vw;
+                    height: 150vh;
+                    /* max-height: 500px; */
+                    display: grid;
+                    align-items: center;
+                }
+                .testimonials .testimonial-heading> .flex{
+                    justify-content: space-between;
+                }
+                .testimonials .right .flex{
+                    width: 130px;
+                    justify-content: space-between;
+                }
+                .testimonials .right button{
+                    cursor: pointer;
+                    background-color: white;
+                    width: 50px;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 10px;
+                    border: .5px solid var(--boxShadowNeutral);
+                }
+                .testimonials .right button:hover{
+                    border: none;
+                    box-shadow: 0 0 5px var(--boxShadowNeutral);
+
+                }
+                .testimonials >div{
+                    width: 100%;
+                    overflow-x: hidden;
+                }
+                .testimonial-heading{
+                    margin:5vh 0;
+                }
+                .testimonial-heading h3{
+                    font-size: 40px;
+                    max-width: 470px;
+                    margin-left: 10%;
+                    position: relative;
+                }
+                .testimonial-heading h3::before{
+                    content: "";
+                    position: absolute;
+                    background-image: url(/img/testm1.svg);
+                    left: -10%;
+                    width: 40px;
+                    top: -33%;
+                    height: 60px;
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    opacity: .7;
+                }
+                .testimonial-bottom{
+                    white-space: nowrap;
+                    overflow-x: scroll;
+                    overflow-y: hidden;
+                    width: 100%;
+                    margin-top: 10px;
+                    padding-left: 2vw;
+                } 
+                .testimonial-bottom::-webkit-scrollbar{
+                    display: none;
+                }
+                .testimonial-bottom >div{
+                    margin-right: 5vw;
+                }
+                .testimonial-bottom >div{
+                    display: inline-block;
+                    width: 40vw;
+                    min-width: 150px;
+                    max-width:346px ;
+                    white-space: normal;
+                }
+                .testimonial-bottom .testimony-icon img{
+                    width: 30px;
+                }
+                .testimonial-bottom .testimony-comment{
+                    height: 300px;
+                    line-height: 25px;
+                    padding: 2vh 3vw;
+                    border-bottom: 1px solid var(--boxShadowNeutral);
+                    margin: 5vh 0;
+                    font-size: 18px;
+                    font-weight: 300;
+                    box-shadow:5px 5px 25px var(--boxShadowNeutral)
+                }
+                .testimonial-bottom .circle-img{
+                    margin-right: 20px;
+                }
+                .testimonial-bottom .circle-img img{
+                    width: 60px;
+                    height:60px;
+                }
+                .testimonial-bottom .name{
+                    font-weight: 600;
+                    font-size: 18px;
+                }
+                .testimonial-bottom .testimonial-details{
+                    display: grid;
+                    grid-gap: 5px;
+                }
+                .testimonial-bottom .role{
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: #00000054;
+                }
+                @media screen and (max-width: 480px) {
+                    .testimonials{
+                        padding: 5vh 5vw;
+                    }
+                    .testimonials .testimonial-heading> .flex{
+                        flex-direction: column;
+                        align-items: flex-end;
+                        grid-gap: 5vh;
+                    }
+                    .testimonial-heading h3{
+                        font-size: 30px;
+                    }
+                    .testimonials .right .flex{
+                        width: 108px;
+                    }
+                    .testimonial-bottom .testimony-icon img{
+                        width: 25px;
+                    }
+                    .testimonial-bottom >div{
+                        width: 70vw;
+                    }
+                    .testimonial-bottom .testimony-comment{
+                        height: 350px;
+                        font-size: 16px;
+                        overflow: hidden;
+                    }
+                }
+            </style>
+            <div class="testimony">
+                <div class="testimony-icon">
+                    <img src="/img/bolt.svg" loading="lazy" alt="urhobo bolt icon"/>
+                </div>
+                <div class="testimony-comment">
+                    This really impacts. The features, quiz and all of that were amazing. The developer had indeed slogged his guts out to put this together for our benefit. He has undoubtedly solved one huge problem confronting the urhobo tribe. Big kudos to him
+                </div>
+                <div class="flex">
+                    <div class="circle-img">
+                        <img  loading="lazy" src="/img/ud/testimonial/testimonial2.png" alt="">
+                    </div>
+                    <div class="testimonial-details">
+                        <p class="name">Akpojotor Lugard</p>
+                        <p class="role">user.</p>
+                        <p class="rating"><img src="/img/5star.svg" loading="lazy" alt="urhobo dictionary 5star rating"></p>
                     </div>
                 </div>
             </div>
             <div class="testimony">
                 <div class="testimony-icon">
-                    hii
+                    <img src="/img/bolt.svg" loading="lazy" alt="urhobo bolt icon"/>
                 </div>
                 <div class="testimony-comment">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic iusto autem porro odit optio, error reprehenderit ipsum quo debitis animi natus modi cupiditate facere ullam rem! Tenetur voluptate quos ipsa, adipisci cupiditate et doloremque eum sequi illum a, quas dolor!
+                     
+                    it helped me understand the traditional urhobo language, down to earth explanation and meanings. simple UI and the dark mode is plus. well done.
                 </div>
                 <div class="flex">
                     <div class="circle-img">
-                        <img  loading="lazy" src="/img/ud/testimonial/testimonial1.png" alt="">
+                        <img  loading="lazy" src="/img/ud/testimonial/testimonial3.png" alt="">
                     </div>
                     <div class="testimonial-details">
-                        <p class="name">Lorem ipsum dolor sit.</p>
-                        <p class="role">Lorem ipsum dolor sit.</p>
-                        <p class="rating">Lorem ipsum dolor sit.</p>
+                        <p class="name">Lesley.</p>
+                        <p class="role">user.</p>
+                        <p class="rating"><img loading="lazy" src="/img/5star.svg" alt="urhobo dictionary 5star rating"></p>
                     </div>
                 </div>
             </div>
             <div class="testimony">
                 <div class="testimony-icon">
-                    hii
+                    <img src="/img/bolt.svg" loading="lazy" alt="urhobo bolt icon"/>
                 </div>
                 <div class="testimony-comment">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic iusto autem porro odit optio, error reprehenderit ipsum quo debitis animi natus modi cupiditate facere ullam rem! Tenetur voluptate quos ipsa, adipisci cupiditate et doloremque eum sequi illum a, quas dolor!
+                    This app is very helpful thanks a million.
                 </div>
                 <div class="flex">
                     <div class="circle-img">
-                        <img  loading="lazy" src="/img/ud/testimonial/testimonial1.png" alt="">
+                        <img  loading="lazy" src="/img/ud/testimonial/testimonial4.png" alt="">
                     </div>
                     <div class="testimonial-details">
-                        <p class="name">Lorem ipsum dolor sit.</p>
-                        <p class="role">Lorem ipsum dolor sit.</p>
-                        <p class="rating">Lorem ipsum dolor sit.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="testimony">
-                <div class="testimony-icon">
-                    hii
-                </div>
-                <div class="testimony-comment">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic iusto autem porro odit optio, error reprehenderit ipsum quo debitis animi natus modi cupiditate facere ullam rem! Tenetur voluptate quos ipsa, adipisci cupiditate et doloremque eum sequi illum a, quas dolor!
-                </div>
-                <div class="flex">
-                    <div class="circle-img">
-                        <img  loading="lazy" src="/img/ud/testimonial/testimonial1.png" alt="">
-                    </div>
-                    <div class="testimonial-details">
-                        <p class="name">Lorem ipsum dolor sit.</p>
-                        <p class="role">Lorem ipsum dolor sit.</p>
-                        <p class="rating">Lorem ipsum dolor sit.</p>
+                        <p class="name"> EJokirhie Blessing.</p>
+                        <p class="role">user.</p>
+                        <p class="rating"><img loading="lazy" src="/img/4star.svg" alt="urhobo dictionary 4star rating"></p>
                     </div>
                 </div>
             </div>
         </div>
-    </section> -->
+    </div>
+    </section>
     
     <h2 class="big-heading"> User feedback </h2>
     <div class="grid2 testimonial">
@@ -1379,6 +1527,24 @@
             })
             menu.addEventListener("click", () => {
                 showSidenav()
+            })
+
+            // testimonial scroll button
+            let testimonialBtn = document.querySelectorAll(".line-btn");
+            let testimonialBottom = document.querySelector(".testimonial-bottom");
+            testimonialBtn[0].addEventListener("click", () => {
+                let width = document.documentElement.clientWidth;
+                testimonialBottom.scrollBy({
+                    left: `-${width / 2}`,
+                    behaviour: "smooth"
+                })
+            })
+            testimonialBtn[1].addEventListener("click", () => {
+                let width = document.documentElement.clientWidth;
+                testimonialBottom.scrollBy({
+                    left: `${width / 2}`,
+                    behaviour: "smooth"
+                })
             })
     </script>
     <style>
