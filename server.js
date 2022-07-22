@@ -59,18 +59,20 @@ function myip(req,res,next){
     }
     if (data.country_code != "NG") {
       return res.redirect(`${pozibleLink}`);
+    }else{
+      return next();
     }
-    return next();
+    
   });
 }
 // app.use()
 app.use("/user", userRoute);
 app.use("/admin", adminRoute);
 
-app.get("/", myip, (req, res) => {
+app.get("/", (req, res) => {
   res.sendFile(Public + "/index.html");
 });
-app.get("/sponsor", (req, res) => {
+app.get("/sponsor",myip, (req, res) => {
   res.sendFile(Public + "/support.html");
 });
 app.get("/congrats", (req, res) => {
