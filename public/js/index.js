@@ -264,8 +264,13 @@ var sectionToshow = (list) => {
         element.classList.remove("active");
     });
     targetsection.classList.add("active");
-    document.documentElement.scrollTop =
-      document.documentElement.clientHeight - 50;
+    let scrollNav = document.querySelector(".scroll"),
+    scrollNavPos = scrollNav.getBoundingClientRect().top;
+    if(scrollNavPos<0){
+        var headerHeight = document.querySelector("header").getBoundingClientRect().height;
+        document.documentElement.scrollTop = headerHeight;
+    }
+    
     
 };
 

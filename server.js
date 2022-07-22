@@ -43,17 +43,31 @@ const userRoute = require("./routes/userRoute");
 userRoute.io = io;
 const adminRoute = require("./routes/adminRoute");
 adminRoute.io = io;
+const pozibleLink = process.env.pozibleLink
 
 // app.use(require("helmet")())
 app.use(express.static(Public));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+function myip(req,res,next){
+  let ip = req.header("x-forwarded-for") || req.connection.remoteAddress;
+  satelize.satelize({ ip: ip }, (err, data) => {
+    if (err) {
+      console.error(err);
+      return next();
+    }
+    if(data.location != "NG"){
+      return res.redirect(pozibleLink);
+    }
+    return next();
+  });
+}
 // app.use()
 app.use("/user", userRoute);
 app.use("/admin", adminRoute);
 
-app.get("/", (req, res) => {
+app.get("/", myip, (req, res) => {
   res.sendFile(Public + "/index.html");
 });
 app.get("/sponsor", (req, res) => {

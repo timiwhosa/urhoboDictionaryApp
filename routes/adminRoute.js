@@ -31,7 +31,7 @@ passport.deserializeUser(User.deserializeUser((id,done)=> {
     return done(null,User.find({_id: id}))
 }));
 function auth(req, res, next) {
-     if (!req.isAuthenticated())return res.redirect("/admin/login");
+     if (!req.isAuthenticated())return res.redirect("/");
      next();
 }
 // User.register(
@@ -65,7 +65,11 @@ router.get("/resource", auth, (req, res) => {
 });
 
 router
-    .route("/login")
+    .route("/priv/login").get((req,res)=>{
+      res.sendFile(path.join(__dirname, "../privateAdminPage/login.js"));
+    })
+router
+    .route("/me/login")
     .get((req, res) => {
         res.sendFile(path.join(__dirname, "../privateAdminPage/login.html"));
     })
