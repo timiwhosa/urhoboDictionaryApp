@@ -58,7 +58,7 @@ function myip(req,res,next){
       return next();
     }
     if (data.country_code != "NG") {
-      return res.redirect(pozibleLink);
+      return res.redirect(`${pozibleLink}`);
     }
     return next();
   });
@@ -76,23 +76,23 @@ app.get("/sponsor", (req, res) => {
 app.get("/congrats", (req, res) => {
   res.sendFile(Public + "/congrats.html");
 });
-// app.get("/myip",(req,res)=>{
-//   let ip = req.header("x-forwarded-for") || req.connection.remoteAddress;
-//   satelize
-//     .satelize({ ip: ip },(err,data) => {
-//       if(err){
-//         console.error(err)
-//         return res.send(err)
-//       }
-//       res.send(
-//         `<h1>satelize: ${JSON.stringify(data,null,2)} </br> req.ip: ${
-//           req.ip + " " + res.socket.localAddress
-//         } </br> req.connection.remoteAddress: ${
-//           req.connection.remoteAddress
-//         }</h1>`,
-//       );
-//     })
-// })
+app.get("/myip",(req,res)=>{
+  let ip = req.header("x-forwarded-for") || req.connection.remoteAddress;
+  satelize
+    .satelize({ ip: ip },(err,data) => {
+      if(err){
+        console.error(err)
+        return res.send(err)
+      }
+      res.send(
+        `<h1>satelize: ${JSON.stringify(data,null,2)} </br> req.ip: ${
+          req.ip + " " + res.socket.localAddress
+        } </br> req.connection.remoteAddress: ${
+          req.connection.remoteAddress
+        }</h1>`,
+      );
+    })
+})
 
 
 // 404
