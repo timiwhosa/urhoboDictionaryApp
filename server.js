@@ -51,19 +51,22 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 function myip(req,res,next){
-  let ip = req.header("x-forwarded-for") || req.connection.remoteAddress;
-  satelize.satelize({ ip: ip }, (err, data) => {
-    if (err) {
-      console.error(err);
-      return next();
-    }
-    if (data.country_code != "NG") {
-      return res.redirect(`${pozibleLink}`);
-    }else{
-      return next();
-    }
-    
-  });
+  try {
+    let ip = req.header("x-forwarded-for") || req.connection.remoteAddress;
+    satelize.satelize({ ip: ip }, (err, data) => {
+      if (err) {
+        console.error("err");
+        next();
+      } else if (data && data.country_code != "NG") {
+         res.redirect(`${pozibleLink}`);
+      } else {
+         next();
+      }
+    });
+  } catch (error) {
+    console.error("error")
+    next()
+  }
 }
 // app.use()
 app.use("/user", userRoute);

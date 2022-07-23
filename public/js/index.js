@@ -199,6 +199,19 @@ var days = Math.floor((deadline - now) / (1000 * 60 * 60 * 24));
 document.getElementById("days-left").innerText = days;
 document.getElementsByClassName("daysleft")[0].innerText = days;
 
+function setTargetRaised(amountRaised){
+    if (amountRaised && amountRaised >0) {
+      let targetIncrease = Math.ceil(amountRaised / targetRaise);
+      let newTargetRaise = targetRaise * targetIncrease;
+        newTargetRaise === amountRaised ? (() => {
+            return (newTargetRaise = targetRaise * (targetIncrease + 1));
+        })() : (() => {return false; })();
+      return newTargetRaise;
+    }else{
+        return targetRaise;
+    }
+}
+
 // youtube api
 // window.addEventListener("DOMContentLoaded", ()=>{
 //     var tag = document.createElement("script");
@@ -688,9 +701,9 @@ function amountRaisedUpdate(newTotal) {
         ele.innerText = `$${newTotal.toLocaleString()}`;
     });
     targetAmountDivs.forEach((ele) => {
-        ele.innerText = `$${targetRaise.toLocaleString()}`;
+        ele.innerText = `$${setTargetRaised(newTotal).toLocaleString()}`;
     });
-    let percentRaised = (newTotal / targetRaise) * 100;
+    let percentRaised = (newTotal / setTargetRaised(newTotal)) * 100;
     progressSpan.style.width = (() => {
         if (percentRaised < 100) return `${percentRaised}%`
         return "100%"
