@@ -20,6 +20,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
         }
         .container{
             display: grid;
@@ -36,9 +37,19 @@
             text-align: center;
             padding: 0 20px;
         }
+        .absolute{
+            position: absolute;
+            top: 2vw;
+            left: 2vw;
+        }
+        .absolute img{
+            width: 80px;
+            height: 80px;
+        }
     </style>
 </head>
 <body>
+    <a href="/" class="absolute"><img src="/img/urhoboDictionary-logo-blue1.png" alt="urho dictionary app logo"></a>
     <div class="container">
         <img src="/img/assets/success.png" alt="success img">
         <div class="text-ctn">

@@ -47,11 +47,12 @@ const paystack = (io) => {
       singlesupporter,
       RewardForyou,
     ) => {
+      
       const https = require("https");
       const options = {
-        hostname: "api.paystack.com",
+        hostname: "api.paystack.co",
         port: 443,
-        path: `/transaction/verify/${confirm.trxref}`,
+        path: `/transaction/verify/`+ confirm.trxref,
         method: "GET",
         headers: {
           Authorization: MySecretKey,
@@ -63,10 +64,8 @@ const paystack = (io) => {
         res.on("data", (chunk) => {
           data += chunk;
         });
-        res.on("end", () => {
-          var response = JSON.parse(JSON.stringify(data));
-          console.log("response:",response)
-          return routerres.send(response)
+        res.on("end", async () => {
+          var response = await JSON.parse(data);
           if (
             response.status &&
             response.data.status === "success" &&
@@ -137,13 +136,16 @@ const paystack = (io) => {
               }
             });
           } else {
-            routerres.redirect("/");
+            // routerres.redirect("/");
+            routerres.send(response)
+
+
           }
         });
       });
       req.end();
     };
-    return {initializePayment ,verifyPayment}
+    return {initializePayment,verifyPayment}
 }
 
 module.exports = paystack;

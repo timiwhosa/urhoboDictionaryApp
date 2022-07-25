@@ -363,6 +363,7 @@ module.exports = async (io, models,escape) => {
                   customer: {
                     email: resp.email,
                     name: resp.name,
+                    first_name: resp.name,
                   },
                 };
                 // initializePayment
