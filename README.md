@@ -24,7 +24,7 @@ Javascript,Node js, HTML, CSS, Node js, Socket io, youtube api...
 
 
 # Logo
-![Logo](https://urhobodictionary.com/img/urhoboDictionary-logo-blue1.png)
+![Logo](https://github.com/timiwhosa/urhoboDictionaryApp/blob/main/public/img/urhoboDictionary-logo-blue1.png)
 
 
 ## License
